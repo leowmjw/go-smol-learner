@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+# Ignore Direnv
+.envrc*
+
+# Ignore Goland
+.idea
