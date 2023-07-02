@@ -14,6 +14,7 @@ Queries
 ```
 
 ## Cody Embeddings Repo
+- github.com/youtube/api-samples
 - github.com/djthorpe/ytapi
 - github.com/lunabrain-ai/lunabrain
 - github.com/treant5612/ytvc-web

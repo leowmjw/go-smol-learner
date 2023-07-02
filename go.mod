@@ -3,7 +3,9 @@ module app
 go 1.20
 
 require (
+	github.com/lunabrain-ai/lunabrain v0.0.0-20230509204128-800fcfb9d0a6
 	github.com/treant5612/ytvc-web v0.0.0-20200302041449-34674f195441
+	golang.org/x/oauth2 v0.9.0
 	google.golang.org/api v0.129.0
 )
 
@@ -16,10 +18,10 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.5 // indirect
 	github.com/googleapis/gax-go/v2 v2.11.0 // indirect
+	github.com/twitchtv/twirp v8.1.3+incompatible // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/crypto v0.10.0 // indirect
 	golang.org/x/net v0.11.0 // indirect
-	golang.org/x/oauth2 v0.9.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect
 	golang.org/x/text v0.10.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
