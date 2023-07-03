@@ -3,6 +3,7 @@ module app
 go 1.20
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/lunabrain-ai/lunabrain v0.0.0-20230509204128-800fcfb9d0a6
 	github.com/treant5612/ytvc-web v0.0.0-20200302041449-34674f195441
 	golang.org/x/oauth2 v0.9.0

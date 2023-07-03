@@ -2,8 +2,8 @@ package ytsum
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
+	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"io"
 	"io/ioutil"
@@ -28,7 +28,8 @@ func CodyYTTranscript() {
 
 	// Create a context and YouTube service.
 	ctx := context.Background()
-	service, err := youtube.NewService(ctx, option.WithHTTPClient(config.Client(ctx)))
+	t := &oauth2.Token{}
+	service, err := youtube.NewService(ctx, option.WithHTTPClient(config.Client(ctx, t)))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -74,8 +75,8 @@ func CodyYTTranscript() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		transcript := transcriptResponse.Items[0].Snippet.TextDisplay
-		transcriptData, err := json.Marshal(transcript)
+
+		transcriptData, err := transcriptResponse.Items[0].Snippet.MarshalJSON()
 		if err != nil {
 			fmt.Println(err)
 		}

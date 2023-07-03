@@ -1,0 +1,7 @@
+set -o allexport
+
+PATH=~/go/bin:$PATH
+YT_DEV_KEY=SECRET-KEY-HERE
+
+set +o allexport
+
