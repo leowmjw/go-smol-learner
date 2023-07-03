@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/lunabrain-ai/lunabrain v0.0.0-20230509204128-800fcfb9d0a6
+	github.com/sashabaranov/kagi-summarizer-api v0.0.0-20230422202629-bd652ae07a7d
 	github.com/treant5612/ytvc-web v0.0.0-20200302041449-34674f195441
 	golang.org/x/oauth2 v0.9.0
 	google.golang.org/api v0.129.0

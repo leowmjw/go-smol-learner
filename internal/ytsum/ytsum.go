@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/davecgh/go-spew/spew"
+	kagi "github.com/sashabaranov/kagi-summarizer-api"
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/option"
 	"google.golang.org/api/youtube/v3"
@@ -20,7 +21,7 @@ const (
 func ComboYTTranscriptFromPlaylist() {
 	// Have a hard-coded playlistID
 	// e.g https://www.youtube.com/playlist?list=PLbRoZ5Rrl5ldi79QwiX4xaR-l9kD4q6kg
-	playListID := "PLbRoZ5Rrl5ldi79QwiX4xaR-l9kD4q6kg"
+	//playListID := "PLbRoZ5Rrl5ldi79QwiX4xaR-l9kD4q6kg"
 
 	ytSumKey := os.Getenv("YT_DEV_KEY")
 	if ytSumKey == "" {
@@ -36,10 +37,62 @@ func ComboYTTranscriptFromPlaylist() {
 	//getPlayListsFromChannel(svc)
 
 	getVideoTranscriptsFromPlayList(svc)
-	fmt.Println("MATCH: ", playListID)
+	//fmt.Println("MATCH: ", playListID)
+}
+
+// summarizeVideo
+func summarizeVideo(videoId string, isExpert bool) {
+
+	videoURL := fmt.Sprintf("https://www.youtube.com/watch?v=%s", videoId)
+	fmt.Println("SUMMARIZE:", videoURL)
+
+	kagiEngine := kagi.SummaryEngineAgnes
+	if isExpert {
+		fmt.Println("ENGINE: MURIEL!!")
+		// Muriel is expensive! USD1 per summary + point!!
+		//kagiEngine = kagi.SummaryEngineMuriel
+		//kagiEngine = kagi.SummaryEngineDaphne // more fun
+		// default - cecil
+		kagiEngine = "cecil"
+	}
+
+	kagiKey := os.Getenv("KAGI_KEY")
+	client := kagi.NewClient(kagiKey)
+	response, err := client.Summarize(
+		context.Background(),
+		kagi.SummaryRequest{
+			URL:         videoURL,
+			SummaryType: kagi.SummaryTypeSummary,
+			Engine:      kagiEngine,
+			Cache:       true,
+		},
+	)
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
+	fmt.Println("Summary: ")
+	fmt.Println(response.Data.Output)
+
+	kpresp, kperr := client.Summarize(
+		context.Background(),
+		kagi.SummaryRequest{
+			URL:         videoURL,
+			SummaryType: kagi.SummaryTypeTakeaway,
+			Engine:      kagiEngine,
+			Cache:       true,
+		},
+	)
+	if kperr != nil {
+		fmt.Println("Error: ", kperr)
+		return
+	}
+	fmt.Println("KeyPoints: ")
+	fmt.Println(kpresp.Data.Output)
 
 }
 
+// getVideoTranscriptsFromPlayList
 func getVideoTranscriptsFromPlayList(service *youtube.Service) {
 	// Have a hard-coded playlistID
 	// e.g https://www.youtube.com/playlist?list=PLbRoZ5Rrl5ldi79QwiX4xaR-l9kD4q6kg
@@ -56,7 +109,10 @@ func getVideoTranscriptsFromPlayList(service *youtube.Service) {
 	// Download each video and get its transcript.
 	for _, item := range playlistItemsResponse.Items {
 		videoID := item.Snippet.ResourceId.VideoId
-		spew.Dump(item.Snippet)
+		// DEBUG
+		//spew.Dump(item.Snippet)
+		//summarizeVideo(videoID, false)
+		summarizeVideo(videoID, true)
 
 		// Download video... not needed
 		//videoResponse, err := service.Videos.
@@ -78,21 +134,35 @@ func getVideoTranscriptsFromPlayList(service *youtube.Service) {
 		//	fmt.Println(err)
 		//}
 
-		// Get transcript.
+		// Get transcript based on VideoID in the loop ..
 		transcriptResponse, err := service.Captions.
-			List([]string{"snippet", "id"}, videoID).Do()
+			List([]string{"id"}, videoID).Do()
 		if err != nil {
 			fmt.Println(err)
 		}
 
-		spew.Dump(transcriptResponse.Items)
-		//service.Captions.Download("").Do()
-		transcriptData, err := transcriptResponse.Items[0].Snippet.MarshalJSON()
-		if err != nil {
-			fmt.Println(err)
+		// DEBUG
+		//spew.Dump(transcriptResponse.Items)
+		if len(transcriptResponse.Items) != 1 {
+			fmt.Println("LEN: ", len(transcriptResponse.Items))
+			break
 		}
-		fmt.Println("=========DAGTA ========")
-		spew.Dump(transcriptData)
+		transcriptId := transcriptResponse.Items[0].Id
+		fmt.Println("VIDEOID: ", videoID, " TRSID: ", transcriptId)
+		// Below needs OAuth2; so might use browser driven method instead ...
+		//resp, cerr := service.Captions.Download(transcriptId).Download()
+		//if cerr != nil {
+		//	fmt.Println("ERR: ", cerr)
+		//	break
+		//}
+		//
+		//downloadBytes, rerr := io.ReadAll(resp.Body)
+		//if rerr != nil {
+		//	fmt.Println(fmt.Errorf("failed to read caption track: %v", rerr))
+		//	break
+		//}
+		//captionTrack := string(downloadBytes)
+		//spew.Dump(captionTrack)
 
 		//// Write transcript to YAML file.
 		//transcriptFile, err := os.Create(videoID + ".yaml")
@@ -103,8 +173,8 @@ func getVideoTranscriptsFromPlayList(service *youtube.Service) {
 
 		break
 	}
-
 }
+
 func getPlayListsFromChannel(svc *youtube.Service) {
 	channelID := "UC4-GrpQBx6WCGwmwozP744Q"
 
