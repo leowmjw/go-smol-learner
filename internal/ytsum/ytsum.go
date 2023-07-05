@@ -4,11 +4,13 @@ import (
 	"context"
 	"fmt"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/ryboe/q"
 	kagi "github.com/sashabaranov/kagi-summarizer-api"
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/option"
 	"google.golang.org/api/youtube/v3"
 	"os"
+	"sync"
 )
 
 // Final implementation here ..
@@ -38,6 +40,77 @@ func ComboYTTranscriptFromPlaylist() {
 
 	getVideoTranscriptsFromPlayList(svc)
 	//fmt.Println("MATCH: ", playListID)
+}
+
+// summarizeSingleVideoMixMatch combines a few to see what is good ..
+func summarizeSingleVideoMixMatch(videoId string) {
+
+	videoURL := fmt.Sprintf("https://www.youtube.com/watch?v=%s", videoId)
+	fmt.Println("SUMMARIZE:", videoURL)
+
+	kagiKey := os.Getenv("KAGI_KEY")
+	client := kagi.NewClient(kagiKey)
+
+	kpresp, kperr := client.Summarize(
+		context.Background(),
+		kagi.SummaryRequest{
+			URL:         videoURL,
+			SummaryType: kagi.SummaryTypeTakeaway,
+			Engine:      kagi.SummaryEngineAgnes,
+			Cache:       true,
+		},
+	)
+	if kperr != nil {
+		fmt.Println("Error: ", kperr)
+		return
+	}
+	fmt.Println("KeyPoints: ")
+	fmt.Println(kpresp.Data.Output)
+
+}
+
+// summarizeVideoMixMatch combines a few to see what is good ..
+func summarizeVideoMixMatch(videoId string) {
+	var wg *sync.WaitGroup
+
+	videoURL := fmt.Sprintf("https://www.youtube.com/watch?v=%s", videoId)
+	fmt.Println("SUMMARIZE:", videoURL)
+
+	kagiKey := os.Getenv("KAGI_KEY")
+	client := kagi.NewClient(kagiKey)
+	wg = new(sync.WaitGroup)
+	wg.Add(3)
+	sumFunc := func(t kagi.SummaryType, e kagi.SummaryEngine) {
+		defer wg.Done()
+		// Do stuff ...
+		fmt.Println("START: ", t, " ENGINE:", e)
+		response, err := client.Summarize(
+			context.Background(),
+			kagi.SummaryRequest{
+				URL:         videoURL,
+				SummaryType: t,
+				Engine:      e,
+				Cache:       true,
+			},
+		)
+		if err != nil {
+			fmt.Println("Error: ", err)
+			return
+		}
+		//time.Sleep(time.Second * 30)
+		q.Q(response.Data.Output)
+		q.Q("^^^^^^^: ", t, " ENGINE:", e)
+		q.Q("===========================")
+	}
+	//Use creative Daphne for summary ..
+	go sumFunc(kagi.SummaryTypeSummary, kagi.SummaryEngineDaphne)
+	// + analytical Agnes for KeyPoints
+	go sumFunc(kagi.SummaryTypeTakeaway, kagi.SummaryEngineAgnes)
+	// have controls using default cecil engine
+	go sumFunc(kagi.SummaryTypeTakeaway, "cecil")
+
+	// Block until all done ...
+	wg.Wait()
 }
 
 // summarizeVideo
@@ -89,6 +162,34 @@ func summarizeVideo(videoId string, isExpert bool) {
 	}
 	fmt.Println("KeyPoints: ")
 	fmt.Println(kpresp.Data.Output)
+
+}
+
+// AllGo ..
+func AllGo(playListId string) {
+	ytSumKey := os.Getenv("YT_DEV_KEY")
+	if ytSumKey == "" {
+		panic(fmt.Errorf("Fill in YT_DEV_KEY!!"))
+	}
+	// Use YT_DEV_KEY to get the needed client
+	service, err := youtube.NewService(context.Background(), option.WithAPIKey(ytSumKey))
+	if err != nil {
+		panic(err)
+	}
+	// Get playlist items (videos).
+	playlistItemsResponse, err := service.PlaylistItems.List([]string{"snippet"}).
+		PlaylistId(playListId).MaxResults(50).Do()
+	if err != nil {
+		panic(err)
+	}
+
+	// Download each video and get its transcript.
+	for _, item := range playlistItemsResponse.Items {
+		videoId := item.Snippet.ResourceId.VideoId
+		//summarizeSingleVideoMixMatch(videoId)
+		//below is concurrent version ..
+		summarizeVideoMixMatch(videoId)
+	}
 
 }
 

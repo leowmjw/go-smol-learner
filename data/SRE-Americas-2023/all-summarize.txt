@@ -1,0 +1,1280 @@
+
+
+[14:43:20 ytsum/ytsum.go:101 app/internal/ytsum.summarizeVideoMixMatch.func1]
+[33m0.001s[0m [1mresponse.Data.Output[0m=[36m- The speaker is helping teams do a retrospective on an incident they had.
+       - The leadership team and SREs are just people who make mistakes and have emotions.
+       - The team Marathon built an amazing platform but still experiences incidents.
+       - Team Inferno talks a big game but their reputation with customers is poor.
+       - The Disco Geeks always deliver but are not always on time and have reliability issues.
+       - Sales people have valuable insights from customers that engineers should listen to.
+       - Courage, the local DBA, had to make changes to the database in a live production environment.
+       - Team Disco is at the center of the incident and their manager, Greg, is dedicated to the team.
+       - Isabella noticed inconsistent database table names and tried to fix them during a regular deploy.
+       - Toxic team dynamics, production pressure, and poor decision-making contributed to the incident.[0m
+[33m0.009s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m0.009s[0m [36m===========================[0m
+[33m1.366s[0m [1mresponse.Data.Output[0m=[36m- Incidents often trace their roots back to socio-technical issues within organizations, not just technical problems. Addressing the human and cultural factors is key to improving reliability.
+       - Psychological safety and a blameless culture are important for teams to feel comfortable reporting issues and sharing what really happened during incidents.
+       - Teams under high production pressure tend to make suboptimal decisions and miss things that could have prevented incidents.
+       - Toxic team environments and authoritarian leadership styles can lead to low code quality and security issues.
+       - Monitoring and automation can help detect and prevent some types of incidents, but teams need the knowledge and expertise to respond to novel issues.
+       - Adaptive capacity and resilience come from teams having the skills to figure out solutions on the fly, not just from technology.
+       - SREs can help teams build adaptive capacity by working with them to understand socio-technical issues and improve processes.
+       - Communication issues and misaligned priorities between teams can contribute to incidents.
+       - Performance metrics can incentivize behaviors that degrade quality if not used carefully.
+       - After incidents, focusing on learning and improvement is more important than assigning blame.[0m
+[33m1.367s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m1.368s[0m [36m===========================[0m
+[33m1.369s[0m [1mresponse.Data.Output[0m=[36mSREcon23 Americas focused on the endgame of SRE. The video discussed how SREs can help teams with incident retrospectives and how psychological safety is important for teams. It also discussed how production pressure can lead to bad decisions and how toxic teams can hide from the problem. The video also highlighted the importance of adaptive capacity and resilience in increasing reliability. It concluded by emphasizing that the work that remains for increasing reliability is people-focused, and helping them grow and understand what's going on.[0m
+[33m1.369s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m1.374s[0m [36m===========================[0m
+[33m2.048s[0m [1mresponse.Data.Output[0m=[36m- The U.S. Digital Service aims to deliver better government services through technology and design.
+       - The objective function in government projects is focused on serving the greatest good for the greatest number and the greatest need.
+       - Government projects must be usable by a wide range of demographics, including those with different ages, education levels, and disabilities.
+       - Government projects often need to target the entire population from day one, unlike industry projects that can target specific customer segments.
+       - The COVID-19 pandemic highlighted the importance of COVID testing sites and the need for efficient data management.
+       - The U.S. Digital Service developed projects like vaccines.gov, report stream, and covatest.gov to address the challenges of the pandemic response.
+       - The Lean Startup methodology and building separate projects with different leaders helped accelerate delivery and improve efficiency.
+       - The blameless retro approach and continuous improvement were key values in the government projects.
+       - The distribution of COVID tests for at-home use required scaling up operations and implementing a simple and efficient ordering system.
+       - The involvement of technology experts and the use of SRE principles played a crucial role in the success of government projects during the pandemic response.[0m
+[33m2.050s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m2.051s[0m [36m===========================[0m
+[33m2.052s[0m [1mresponse.Data.Output[0m=[36m- SRE practices and mindset were important parts of the government's digital response to the COVID-19 pandemic, helping projects launch faster and scale effectively.
+       - There are differences in operating in government versus industry, including higher regulatory constraints, less clear objective functions, and the need to serve all citizens from day one.
+       - Using Lean Startup methodology and splitting projects into smaller parts helped launch projects quickly.
+       - Adopting SRE practices like logging, infrastructure as code, and devops teams helped accelerate delivery.
+       - Focusing on service delivery and preparing for incidents helped unite stakeholders across different organizations.
+       - Launching a "soft launch" site first to iterate and optimize before the official launch helped improve the final government site.
+       - Conducting incident response simulations helped teams understand how different organizations worked together.
+       - Keeping things as simple as possible, like using zip code search instead of address search, helped optimize the sites.
+       - Phase rollouts and canary launches helped introduce load gradually and verify systems could scale as expected.
+       - Involving technology teams early in decision making helped implement solutions differently than if technology was not involved from the start.[0m
+[33m2.053s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m2.053s[0m [36m===========================[0m
+[33m3.380s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the role of SREs in the US government's response to the COVID-19 pandemic. Three projects were discussed: Vaccines.gov, Simple Report, and Covatest.gov. The US Digital Service used the Lean Startup methodology and separated the projects into two different leaders to speed up delivery. The US Postal Service delivered 6 million packages a day at the peak of the pandemic. SREs were essential in helping the government create a website that replicated an online shopping experience and could handle the scale of the project. The website was able to get three quarters of a billion tests delivered to 185 million addresses across the US. It was also noted that SREs brought a blameless retro approach to the project, which was foreign to government and helped build trust within the team.[0m
+[33m3.381s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m3.382s[0m [36m===========================[0m
+[33m4.056s[0m [1mresponse.Data.Output[0m=[36mThis video is about a metastable failure incident that occurred on the East Coast. It was caused by a DRP glow test, which simulated the largest region failing at the time of the highest traffic. The incident was caused by machines running out of memory and crashing, and the system health checks were affected by the load shedding, causing traffic oscillations between regions. To prevent this from happening again, the team made an explicit choice to spread traffic evenly across all machines, changed the health checks to look at the short term history, and adjusted the weights of the CDN design. They also built automation to support tier isolation and invested in stronger container level isolation and resource limits.[0m
+[33m4.057s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m4.058s[0m [1mresponse.Data.Output[0m=[36m- Metastable failures are a class of failures where a system fails under increased load and cannot recover due to a sustaining effect.
+       - The three attributes of metastable failures are: a trigger that causes the system to enter a bad state, the system is unusable while in the bad state, and a sustaining effect that prevents self-recovery.
+       - Metastable failures and cascading failures are distinct, though there is overlap. Metastable failures imply the system has the potential to self-recover but does not during the failure.
+       - Disabling health checks and spreading traffic evenly across all machines, even unhealthy ones, can break the sustaining effect and allow recovery from a metastable failure.
+       - Load shedding by disabling health checks forced a normal traffic spread, avoiding overloading healthy instances.
+       - Health checks can be affected by load shedding, causing traffic oscillations.
+       - The system was able to serve stale cached content during the failure, reducing data loss.
+       - Changes were made to health checks, region weights, tier isolation, and auto-scaling to prevent a similar incident.
+       - Spreading traffic across all services, even failing ones, can avoid overloading surviving services and cascading failures.
+       - Understanding how your system will behave under failure can help with recovery and remediation.[0m
+[33m4.059s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m4.060s[0m [36m===========================[0m
+[33m4.060s[0m [36m===========================[0m
+[33m5.649s[0m [1mresponse.Data.Output[0m=[36m- Metastable failures and cascading failures are distinct but can overlap in incidents.
+       - The incident described involved a DRP glow test and alerts flooding the CDN team.
+       - The incident caused machines to disappear and reappear, leading to a disrupted system.
+       - The incident was initially thought to be a power failure but was actually due to machines running out of memory and crashing.
+       - The incident resulted in traffic sloshing between regions, causing a cascading effect.
+       - Disabling health checks and spreading the load helped mitigate the incident.
+       - The incident highlighted the importance of realizing the scale of the problem and addressing distinct failure modes.
+       - The CDN read path was affected, but there was no data loss.
+       - Design changes were made to prevent future metastable failures, including spreading traffic evenly and adjusting weights in the CDN.
+       - Automation and stronger container-level isolation were implemented to improve system stability.[0m
+[33m5.650s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m5.651s[0m [36m===========================[0m
+[33m6.250s[0m [1mresponse.Data.Output[0m=[36m- Resilience in software systems depends on the ability to learn about the system and adapt to changing conditions.
+       - Humans, particularly SREs, play a critical role in the adaptation and resilience of software systems.
+       - Failure is inevitable in complex systems, and it is important to adapt and learn from failures instead of trying to prevent them entirely.
+       - Resilience is defined as the ability to prepare for, recover from, and adapt to adverse conditions and events.
+       - Systems can absorb changes in conditions up to a certain point before they become no longer resilient.
+       - Flexibility and willingness to change are essential for sustaining resilience in software systems.
+       - Chaos experiments can be used to learn about the behavior of systems under stress and improve system design.
+       - Mental models of the system are cognitive representations of external reality and are often incomplete and inconsistent.
+       - Decision trees can help align mental models with reality and guide decision-making in complex systems.
+       - Continuous learning and refinement of mental models are necessary to sustain resilience in evolving software systems.[0m
+[33m6.251s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m6.252s[0m [36m===========================[0m
+[33m7.987s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the importance of resilience in software systems and how chaos experiments can help us learn about the reality of our systems. It discussed how decision trees can be used to map out adverse events and potential mitigations, and how they can be used to refine our mental models of the system. It also discussed how chaos experiments can be used to uncover baffling interactions and to identify weaknesses in the system. An example of a chaos experiment was given, involving the severing of a database replication between two sites. Finally, it was highlighted that decision trees are essential for optimally sustaining resilience, and can be used during incident reviews and retrospectives.[0m
+[33m7.988s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m7.995s[0m [36m===========================[0m
+[33m7.996s[0m [1mresponse.Data.Output[0m=[36m- Systems resilience depends on the ability to learn from reality and adapt to changing conditions. Chaos experiments can help expose gaps in our mental models and improve system design.
+       - Adaptive capacity is the ability of a system to change how it operates in response to evolving conditions. Resilience reflects this need for sustained adaptation.
+       - Humans are the primary adaptive capability in software systems. They act as the mechanism for adaptation in response to failures and surprises.
+       - Chaos experiments can help uncover interactions in systems by revealing how reality differs from our mental models. This helps us continuously improve system design.
+       - Security chaos engineering uses experiments to verify that systems operate as expected and improve resilience to attacks.
+       - Decision trees can help visualize our mental models and refine them over time. They map potential failures and mitigations.
+       - Experiments inform decision trees and vice versa, forming a feedback loop to continuously improve resilience.
+       - Decision trees are useful during incident reviews to identify gaps in assumptions and mental models.
+       - Starting with the most obvious and expected failures in decision trees allows you to continuously verify resilience to low-hanging fruit issues.
+       - Few organizations ever tackle the most esoteric and unlikely failures. Focus should be on the more common and expected issues first.[0m
+[33m7.998s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m7.999s[0m [36m===========================[0m
+[33m8.500s[0m [1mresponse.Data.Output[0m=[36m- Kafka is the "beating heart" of Honeycomb's system, with all data flowing through Kafka before being persisted and queried.
+       - Using streaming services like Kafka decouples state from Honeycomb's systems, allowing them to release software updates every hour.
+       - Kafka provides ordering of data, which helps Honeycomb keep copies of data consistent and able to recover from failures.
+       - Problems with Honeycomb's Kafka-based system can arise from producers, consumers, or brokers. It's important to identify which is the issue to properly address it.
+       - Batching events when producing to Kafka can improve compression ratio and limit data loss if a producer crashes.
+       - Honeycomb does not use Kafka as a permanent data store, instead persisting data to S3. This limits how far back they need to replay data after an outage.
+       - Profiling and stress testing Honeycomb's Kafka cluster helped identify optimizations and limits to hardware and software.
+       - Honeycomb monitors application-level metrics and traces to correlate issues with Kafka performance.
+       - Honeycomb's goal is for Kafka to require minimal "toil" as the system scales, without adding more layers of abstraction like Kubernetes.
+       - Honeycomb wants to improve self-healing and self-management of their Kafka cluster as they grow.[0m
+[33m8.500s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m8.501s[0m [36m===========================[0m
+[33m10.011s[0m [1mresponse.Data.Output[0m=[36mIn this video, the speaker discussed how Honeycomb scaled their Telemetry system by a factor of 10 over the past three years. They adopted Apache Kafka to decouple state from their systems and achieve high reliability targets. Kafka is the "Beating Heart" of Honeycomb, and they use Z standard compression to save bandwidth. They also use application level observability to measure user journeys and ensure adequate freshness. Finally, they stress test their system once a week to discover the limits of what they can do. It was interesting to learn how Honeycomb leverages Kafka to ensure their system is reliable and efficient.[0m
+[33m10.013s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m10.014s[0m [36m===========================[0m
+[33m10.034s[0m [1mresponse.Data.Output[0m=[36m- The speaker emphasizes that there are no "best practices" in building reliable systems, only lessons learned from past mistakes.
+        - The purpose of the Telemetry system at Honeycomb is to analyze customer data in real-time and provide insights into system behavior.
+        - Streaming is a more scalable and supportable system for handling large volumes of data compared to request-response systems.
+        - Apache Kafka was chosen by Honeycomb for its ability to decouple state from systems and enable frequent releases with high reliability targets.
+        - Stateless producers in Kafka allow for easier system operation and maintenance.
+        - Kafka provides redundancy and consistency in data processing, allowing for easy recovery from failure conditions.
+        - Honeycomb chose to use Kafka instead of building their own system to avoid unnecessary effort and leverage the expertise and stability of an off-the-shelf product.
+        - Z standard compression is recommended for Kafka replication to save on bandwidth costs.
+        - Follower fetch in Kafka allows for reading from followers, reducing costs and improving availability.
+        - Regular stress testing and observability are crucial for understanding system limits and ensuring reliability.[0m
+[33m10.035s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m10.036s[0m [36m===========================[0m
+[33m10.854s[0m [1mresponse.Data.Output[0m=[36m- Scaling infrastructure and systems for rapid growth can be challenging, especially when done by volunteers with limited time.
+        - Making changes easily is important, but it's more important to make change easy to process and handle, giving humans time and back pressure.
+        - You can never fully prepare for exponential scale, but you can prepare to support each other through the challenges.
+        - Approachability, safety, experimentation, and transparency are important values for infrastructure teams.
+        - Prioritizing time and tasks effectively is critical for volunteer teams with limited resources.
+        - Technologies like NixOS, Terraform, and a multi-cloud approach can help make infrastructure more approachable, safe, and predictable.
+        - Even minimal documentation and transparency can help volunteers contribute and manage infrastructure.
+        - There is rarely a single root cause for issues; many factors contribute to incidents and problems.
+        - Learning from incidents and involving the community can help improve systems over time.
+        - Psychological safety and support from the team can help volunteers through challenges.[0m
+[33m10.857s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m10.858s[0m [36m===========================[0m
+[33m11.983s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the challenges of scaling Hackaderm, a distributed system, from a novice basement to a production environment. It discussed the importance of having aligned incentives, approachability, transparency, and safety when building a system. It also discussed the use of NixOS and multi-cloud as a way to ensure safety and approachability. Lastly, it highlighted the importance of documentation and incident reviews to ensure transparency and understanding of the system. An interesting takeaway from this video was the use of memes to support each other during the process of scaling Hackaderm.[0m
+[33m11.984s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m11.985s[0m [36m===========================[0m
+[33m12.045s[0m [1mresponse.Data.Output[0m=[36m- The talk is about the accidental transformation of Hackaderm into a large elephant watching sanctuary.
+        - The team faced challenges during the migration from bird watching to elephant watching.
+        - The old habitat of Hackaderm worked well until a birdocalypse occurred.
+        - The team encountered issues with the V2 of Hackaderm, including unusual locking up and the need for more CPU.
+        - The team made changes to reduce pressure on the system, such as moving to office storage and using RAM for logging.
+        - The team emphasized the importance of balancing human workflows and streamlining communication.
+        - They learned the importance of back pressure for humans and cute server names for servers.
+        - The team prioritized approachability, transparency, and documentation in their values and decision-making.
+        - They discussed the potential use of NixOS as an operating system for Hackaderm.
+        - The team highlighted the need for transparency, good PR comments, and documentation in their infrastructure.[0m
+[33m12.047s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m12.047s[0m [36m===========================[0m
+[33m12.806s[0m [1mresponse.Data.Output[0m=[36m- The team experienced DNS errors during the rollout of their metric service.
+        - The DNS errors were caused by node local DNS being unable to communicate with cluster DNS.
+        - The team initially thought the issue was related to memory allocation for the DNS process, but increasing the memory did not solve the problem.
+        - They discovered that the issue was actually related to the contract on the AWS hypervisor being saturated.
+        - The team switched to network optimized instances, which improved the situation but did not fully resolve the issue.
+        - They discovered a metric called "Ena contract exceeded" which indicated that someone was aggressively trying to reconnect with their metric service.
+        - The team implemented graceful termination with a timeout to prevent new connections during rollouts.
+        - They found that the DNS resolution in their system was causing delays and had a wide window for sending requests.
+        - The team realized that the load balancing policy they had implemented was causing a flood of SYN packets during rollouts.
+        - Adjusting the reconnection settings in the load balancing policy resolved the SYN flooding issue.[0m
+[33m12.807s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m12.809s[0m [36m===========================[0m
+[33m14.030s[0m [1mresponse.Data.Output[0m=[36mThis video discussed a complex issue that Datadog encountered when rolling out their metric service. Initially, they thought the issue was DNS related, but after further investigation, they discovered that the issue was actually related to the AWS hypervisor's connection tracking table being saturated. They also discovered that their alerting engine was sin flooding the metric service node due to aggressive reconnection settings in their grpc setup. After making some changes to their grpc setup, they were able to resolve the issue. This video highlights the importance of understanding the underlying abstractions and spending time to investigate complex issues.[0m
+[33m14.031s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m14.032s[0m [36m===========================[0m
+[33m14.060s[0m [1mresponse.Data.Output[0m=[36m- The metric service at Datadog was experiencing high error rates after rolling restarts.
+        - Initial signs pointed to a DNS issue, but after investigating further, it turned out not to be a DNS problem.
+        - Node local DNS was running out of memory and being OOM killed during rollouts, despite configuring max concurrent requests.
+        - They found that the forwarding component of node local DNS was unable to contact the upstream resolver, suggesting a networking issue.
+        - They saw signs of network saturation like TCP retransmits but network throughput graphs looked normal.
+        - They discovered that they were saturating the connection tracking table on the AWS hypervisor.
+        - They realized they were hitting reverse path filtering due to an edge case in the kernel networking code.
+        - They found that the aggressive reconnection settings in gRPC were causing a SYN flood during rollouts.
+        - Changing the gRPC load balancing policy from pick first to round robin caused the SYN flood issue.
+        - After adjusting the gRPC reconnection settings, they were able to perform rolling restarts without errors.[0m
+[33m14.061s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m14.062s[0m [36m===========================[0m
+[33m14.644s[0m [1mresponse.Data.Output[0m=[36m- The 1979 NORAD nuclear near miss incident almost led to a retaliatory response to a simulated Soviet nuclear attack.
+        - The incident highlights the importance of understanding the interaction between computer technology and social factors in distributed systems.
+        - Analog computing devices were prevalent during World War II and were considered superior to digital technology at the time.
+        - Vannevar Bush played a key role in consolidating scientific and technological expertise in the United States during the war.
+        - The development of digital technologies, despite initial skepticism, gained traction with engineers like J Forrester at MIT.
+        - The US military recognized the importance of digital technology for radar defense systems and command and control purposes.
+        - The Sage Continental air defense system was the first large-scale computerized command and control system, forming the technological infrastructure for closed-loop military operations.
+        - The military's focus on metrics and disconnected success indicators led to technocratic decision-making and a lack of understanding of ground realities.
+        - The incident was caused by a bad handshake between the MGR and CSS systems, leading to a false threat assessment of 1,400 incoming nuclear missiles.
+        - The incident highlights the dangers of closed-world thinking and the need for critical questioning and open-mindedness in socio-technical systems.[0m
+[33m14.645s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m14.646s[0m [36m===========================[0m
+[33m14.646s[0m [1mresponse.Data.Output[0m=[36m- The 1979 NORAD nuclear near miss incident almost resulted in the U.S. retaliating against a supposed Soviet nuclear attack, but it was later determined to be a false alarm.
+        - The incident was caused by a combination of factors, including outdated computer systems, lack of coordination, and a "closed world" mentality that valued certainty over uncertainty.
+        - The military's computer systems at the time were becoming increasingly complex, networked, and tightly coupled, making problems difficult to diagnose and fix.
+        - The development of digital computers was driven by military needs for command and control, early warning systems, and nuclear strategy.
+        - Operators questioned the data they were seeing and cross-checked with other sources, which helped them determine it was a false alarm.
+        - Asking critical questions, making noise, and overcoming local biases can help complex systems avoid issues in the long run.
+        - The military adopted a "closed world" mentality that valued certainty and exact calculations over uncertainty and learning.
+        - The "zero-sum fallacy" of viewing the U.S. and USSR as totally opposed contributed to the incident.
+        - Treating socio-technical systems as complex and open, rather than totalized, can help avoid similar issues.
+        - Being an SRE involves thinking critically and questioning what you're given, rather than just accepting information at face value.[0m
+[33m14.647s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m14.648s[0m [36m===========================[0m
+[33m16.284s[0m [1mresponse.Data.Output[0m=[36mThis video discusses the 1979 NORAD Nuclear Near Miss, an incident in which military officials almost retaliated against a supposed Soviet nuclear attack. It traces the history of computing from World War II to the 1970s, when computers were becoming increasingly networked and complex. It explains how the Cold War politics of the time, the Truman Doctrine of containment, and the development of the Worldwide Military Command and Control System led to the incident. On the day of the incident, a circuit transmitting satellite serial data through Buckley Air Force Base blipped, and the MGR was connected to a backup conduit. This led to a threat assessment conference, in which the responders cross-checked against alternative data sources and the DOD began downplaying the incident. The video highlights the importance of asking critical questions and making noise in order to prevent similar incidents from happening in the future.[0m
+[33m16.285s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m16.287s[0m [36m===========================[0m
+[33m16.795s[0m [1mresponse.Data.Output[0m=[36m- Terraform is a great tool for managing infrastructure as code, but it can struggle to scale to hundreds of deployments.
+        - As Terraform deployments grow, plan times become longer due to API calls and refreshing state.
+        - Splitting Terraform deployments into smaller ones can help reduce plan times, but introduces the risk of drift between deployments.
+        - Fixing drift in Terraform is difficult due to its complex resource dependencies.
+        - Splitting deployments also leads to boilerplate code duplication.
+        - The speaker's solution, Stacks for Terraform, is a code preprocessor that abstracts away deployment specifics from the Terraform code.
+        - Stacks helps keep drift under control by making differences between deployments obvious in the code.
+        - Stacks improves the developer experience by injecting boilerplate and variables, so developers only need to define resources.
+        - Stacks features include variable scoping, secret injection, and templating.
+        - The speaker recommends using code preprocessing like Stacks to better scale Terraform deployments.[0m
+[33m16.796s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m16.798s[0m [36m===========================[0m
+[33m18.535s[0m [1mresponse.Data.Output[0m=[36mThis video discussed how ThousandEyes used Terraform to scale their infrastructure to hundreds of deployments. They used a tool called Stacks to add a layer of abstraction in front of Terraform, allowing them to define a single code base for fanning out into Terraform. This helps keep drift under control and makes the developer experience much better. Stacks also has features like cascading variable scope, automatically injected state backends and providers, and secret injection. This allows them to keep their infrastructure in sync and deploy changes in less than five minutes.[0m
+[33m18.535s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m18.536s[0m [36m===========================[0m
+[33m18.536s[0m [1mresponse.Data.Output[0m=[36m- Scaling Terraform to hundreds of deployments can be challenging and may lead to long plan times.
+        - Splitting deployments into smaller units can help mitigate the issues with long plan times and resource overload.
+        - Splitting deployments can also introduce the problem of drift, where different deployments have different files and configurations.
+        - Fixing drift in Terraform can be difficult and time-consuming.
+        - TerraGrunt is a commonly used tool for managing Terraform deployments.
+        - Stacks is a tool that adds a layer of abstraction to Terraform and allows for a more streamlined and scalable approach to managing deployments.
+        - Stacks enables the use of stack definitions and layers to organize and manage deployments.
+        - Stacks automatically injects state backends, providers, and variables, making the developer experience easier and more efficient.
+        - Stacks offers additional features such as cascading variable scope, secret injection, and improved handling of HCL.
+        - Using Stacks in conjunction with Atlantis, an open-source automation tool, can further enhance the efficiency and speed of managing Terraform deployments.[0m
+[33m18.537s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m18.537s[0m [36m===========================[0m
+[33m19.148s[0m [1mresponse.Data.Output[0m=[36m- Metrics are measurements that capture runtime information about a service. They can be aggregated over time to identify trends and patterns.
+        - OpenTelemetry is an observability framework that standardizes how applications are instrumented and telemetry is generated, collected, and transmitted.
+        - Metrics are useful for observability as they can power graphs and charts, enable longer data retention, and form the basis for service level indicators and objectives.
+        - In OpenTelemetry, meters are used to obtain instruments which are then used to record measurements with values and attributes.
+        - Aggregation, temporality, monotonicity, dimensions, and cardinality are important metrics concepts.
+        - OpenTelemetry provides counters, up/down counters, histograms, and gauges as metric instruments. The instrument type determines how measurements are aggregated.
+        - Instrument selection is important based on how you want to analyze the data and whether measurements are needed synchronously or asynchronously.
+        - Views allow customizing the metrics that are output by the OpenTelemetry SDK, like changing the default aggregation.
+        - Experimenting with instrumenting an application and implementing metrics is a good next step to learn more.
+        - Exploring data point types, attributes, exporting options, and metric processors can further expand metrics knowledge.[0m
+[33m19.148s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m19.149s[0m [36m===========================[0m
+[33m20.699s[0m [1mresponse.Data.Output[0m=[36mIn this video, the speaker discussed OpenTelemetry Metrics 101. She discussed the design goals of the project, the basics of metrics, the architecture of a metrics pipeline, and metric instruments types and use cases. She also provided a framework for how to choose an instrument and discussed the different types of instruments available in OpenTelemetry. She also provided a list of topics to explore and reference material to consult. An interesting point she made was that managing cardinality is important when collecting telemetry, as it can result in data being dropped if the backend imposes cardinality limits.[0m
+[33m20.700s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m20.701s[0m [1mresponse.Data.Output[0m=[36m- The speaker discusses the OpenTelemetry Metrics 101 session at SREcon23 Americas.
+        - The speaker mentions that they have monthly sessions and summarize the discussions on their blog.
+        - The speaker shares some personal fun facts about themselves.
+        - Metrics are measurements about a service captured at runtime and can be aggregated over time to identify trends and patterns.
+        - OpenTelemetry aims to connect metrics to other signals, provide a migration path for OpenCensus customers, and work with existing metrics instrumentation protocols.
+        - Metrics can be categorized into infrastructure, application, one-time, business, and custom metrics.
+        - The speaker uses the example of an online shop selling telescopes to explain the types of metrics that can be collected.
+        - The speaker discusses concepts like aggregation, temporality, dimension, and cardinality in relation to metrics.
+        - The speaker explains the architecture of a metrics pipeline and the different types of metric instruments.
+        - The speaker provides guidance on how to choose the appropriate metric instrument based on analysis needs, synchronicity, and monotonicity.[0m
+[33m20.702s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m20.702s[0m [36m===========================[0m
+[33m20.703s[0m [36m===========================[0m
+[33m21.300s[0m [1mresponse.Data.Output[0m=[36mThis video discusses the differences between incident commanders and incident analysts, and how their skills can inform each other. It emphasizes the importance of learning from incidents and investing in the second half of the incident life cycle. It also highlights the importance of narrative storytelling when conducting incident reviews, and encourages people to approach incident reviews with curiosity rather than judgement. It also emphasizes the importance of recognizing that people are whole people, and that their experiences outside of the incident can affect their decisions during the incident. Finally, it encourages people to reach out to organizations like Jelly.io for help in creating a sustainable incident program.[0m
+[33m21.302s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m21.303s[0m [36m===========================[0m
+[33m22.734s[0m [1mresponse.Data.Output[0m=[36m- Incidents are part of a life cycle, not just isolated events. There is a cycle of incidents, response, learning, and improvement that repeats.
+        - The learning and analysis part of the incident life cycle is important to improve how future incidents are handled.
+        - The role of an Incident Commander is more about managing and facilitating communication during an incident, not actually fixing the problem.
+        - The role of an Incident Analyst is to uncover what led to the incident through investigative work and interviews to learn and improve.
+        - Having the same person act as both Incident Commander and Analyst can introduce bias and limit learning. Separate roles are needed.
+        - Incident analysis work requires specific skills like interviewing, knowledge elicitation, and a blame-free culture. It cannot be done through templates alone.
+        - Bringing analysis skills into response and response skills into analysis can strengthen both roles.
+        - An attitude of curiosity, not judgement, helps both response and analysis.
+        - Building relationships and trust between coworkers lays the foundation for effective incident response and learning.
+        - Recognizing that people involved in incidents are whole humans dealing with life outside of work can help facilitate better response and learning.[0m
+[33m22.735s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m22.735s[0m [1mresponse.Data.Output[0m=[36m- Incidents are not isolated events, but part of a larger life cycle or circle of incidents.
+        - Learning from incidents is crucial for improving future incident handling and preventing similar issues.
+        - Post-incident activities, such as debriefing and sharing incident reports, contribute to the learning process.
+        - Changes and improvements made based on incident learnings can impact various aspects, including on-call schedules, customer queues, and even legislation.
+        - Incidents are inevitable in a rapidly growing industry, but learning from them can help better handle future incidents.
+        - Incident Commanders focus on managing coordination, communication, and collaboration during incidents.
+        - Incident Analysts are responsible for uncovering the causes and factors that led to the incident.
+        - Both Incident Commanders and Incident Analysts require specific skills and training.
+        - Analysis skills can inform response, and response skills can enhance analysis.
+        - Curiosity, empathy, and recognizing the human element are essential in both incident response and analysis.[0m
+[33m22.736s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m22.736s[0m [36m===========================[0m
+[33m22.737s[0m [36m===========================[0m
+[33m23.349s[0m [1mresponse.Data.Output[0m=[36m- Handover communications are important to ensure continuity and safety when responsibilities are transferred from one person or team to another. They involve effective communication to achieve a transfer and acceptance of responsibility.
+        - Research on handover communications started in the late 1990s, focusing on high-stakes situations like NASA operations and nuclear power plants. It has since grown to also cover healthcare, software operations, and other fields.
+        - Confidence in the information exchange after a handover is related to how effective the handover communication is. Key attributes that contribute to engineers' confidence include details, availability for questions, and consistency.
+        - Inconsistent information requirements across departments and lack of availability after handovers can decrease engineers' confidence. Verbal handovers with digital follow-ups and more detailed handovers can increase confidence.
+        - Organizations should provide guidance on the information needed for handovers, but not rigid templates that may lack vital details.
+        - Acknowledging handovers and being available for questions afterwards can improve confidence.
+        - Embedding handover workflows into existing tools like Slack can reduce context switching and improve preparedness.
+        - Testing the key findings from the research could potentially provide increased confidence for engineers after handovers.
+        - Continuous improvement of handover processes is important as needs change over time.
+        - Both verbal and written handover communications have benefits and drawbacks, and a combination of the two may be most effective.[0m
+[33m23.350s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m23.350s[0m [36m===========================[0m
+[33m24.890s[0m [1mresponse.Data.Output[0m=[36mChad Todd discussed findings from his research on Handover Communications in Software Operations. He found that there were 4,000 handovers occurring in healthcare per day in 2017, and that there was minimal guidance provided for each department on what information was needed for the handover. He identified several factors that can decrease or increase confidence after a handover, such as verbal handovers in support of digitally written handovers, writing out detailed handovers, creating an embedded workflow or process for the handover, and acknowledging the handover. He concluded that these findings may help provide increased confidence for engineers after a handover. An interesting takeaway from his research was that engineers preferred verbal handovers over digitally written ones.[0m
+[33m24.894s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m24.895s[0m [36m===========================[0m
+[33m24.896s[0m [1mresponse.Data.Output[0m=[36m- Handover Communications in software operations is a common practice, but there is limited research on it compared to other fields like healthcare.
+        - There are two types of Handover Communications: verbal and written.
+        - Confidence in Handover Communications is subjective and can vary depending on the situation.
+        - Engineers prefer verbal handovers, but digital written handovers are more common in organizations.
+        - Continuous improvement is important in evolving Handover Communications, especially in remote work situations.
+        - Information exchange and coming up to speed are crucial aspects of Handover Communications.
+        - Formal Handover templates have both benefits and drawbacks, and a balance between structure and flexibility is needed.
+        - Many organizations lack clear guidance and processes for Handover Communications, leading to inconsistencies.
+        - Acknowledgment of the Handover is important for building common ground and ensuring satisfactory communication.
+        - Availability and follow-up after the Handover are crucial for gaining more context and increasing confidence.[0m
+[33m24.896s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m24.897s[0m [36m===========================[0m
+[33m25.391s[0m [1mresponse.Data.Output[0m=[36m- JPMorgan Chase is a large financial services company with over 57,000 technologists and an annual tech spend of $14 billion. They are undergoing a major transformation to move services to the public cloud.
+        - The company has hired thousands of cloud computing specialists and cybersecurity engineers to help with the cloud migration. The move to the cloud is seen as critical for remaining competitive.
+        - Security is a top priority given the nature of financial services, and security is baked into everything they do.
+        - The scale of the engineering challenge is massive, with hundreds of teams using different tooling and approaches. SREs are playing a key role in catalyzing the cloud transformation.
+        - There are four main lines of business within JPMorgan Chase, each with their own management frameworks and organizations. Aligning everyone on approaches and tooling can be difficult at this scale.
+        - The company uses a wide variety of compute platforms and programming languages, making alignment across the organization challenging.
+        - The SRE approach involves applying software methodology to operations problems to solve issues at scale. Trust is an important currency for SREs to work with different teams.
+        - Reliability and trust are critical given the financial services nature of the company. Downtime can directly impact revenue.
+        - SREs have had to establish relationships and build trust with teams across the organization in order to gain influence and drive change.
+        - Periods outside of trading windows have allowed the company to prioritize reliability work, though "black swan" events still pose challenges.[0m
+[33m25.392s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m25.392s[0m [36m===========================[0m
+[33m25.453s[0m [1mresponse.Data.Output[0m=[36mThis talk by Fred, an executive director at JPMorgan Chase, discussed the challenges of moving the company's services to the public cloud. He discussed the complexity of the problem, the scale of the firm, and the need to combine financial services domain expertise with cloud native operational patterns. He also discussed the need to measure reliability and manage infrastructure at scale, and the importance of establishing relationships with teams to build trust and show leadership. He highlighted the need for trust and reliability in the financial services industry, and the need to hack Dunbar's number to reach out to 60,000 engineers.[0m
+[33m25.454s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m25.455s[0m [36m===========================[0m
+[33m27.034s[0m [1mresponse.Data.Output[0m=[36m- JPMorgan Chase is a financial services company that is moving into the public cloud.
+        - The company has hired thousands of technologists to combine tech industry expertise with financial services domain knowledge.
+        - The scale of the company is massive, with almost 57,000 technologists and an annual tech spend of $14 billion.
+        - Security and reliability are top priorities for JPMorgan Chase due to the nature of their business.
+        - The company is increasing its digital offerings and has committed to transitioning its architecture and operations to the public cloud.
+        - SRE (Site Reliability Engineering) is a key component of JPMorgan Chase's transformation, with SREs working on roles related to reliability engineering and moving services to the cloud.
+        - The SRE mindset at JPMorgan Chase involves applying software solutions to solve problems at scale in web operations.
+        - Moving legacy on-prem systems to a cloud-native landscape presents challenges in resource management, measuring reliability, and managing infrastructure.
+        - Establishing and managing relationships across different teams, regions, and lines of business is crucial for successful cloud migration at scale.
+        - Building trust and empathy with teams, as well as taking on the heavy lifting, are important for SREs to lead the transformation.[0m
+[33m27.035s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m27.036s[0m [36m===========================[0m
+[33m27.648s[0m [1mresponse.Data.Output[0m=[36m- Startups need to focus on getting a product out quickly and may accumulate technical debt in the process.
+        - Technical debt can manifest as features that can't handle increased traffic, lack of API boundaries, and outdated systems engineering practices.
+        - Manual operations become unsustainable as a startup grows, leading to inefficiencies and burnout.
+        - Cultural friction can arise when implementing new processes, as employees may resist change and view it as a burden.
+        - Establishing credibility as an SRE in a startup requires listening, understanding the context of design choices, and validating the challenges faced by developers.
+        - Selling the benefits of SRE practices to management requires demonstrating how they can improve the bottom line, such as reducing attrition due to on-call burnout.
+        - Prioritizing pain points and focusing on specific issues helps build credibility and allows for more effective problem-solving.
+        - Scaling efforts in cultural and technological change requires building self-sustaining solutions and creating champions for the changes.
+        - The SRE toolkit, including SLOs, incident reviews, and automation, can help address underlying cultural and technical problems.
+        - Celebrating wins and acknowledging progress is important when implementing large-scale changes.[0m
+[33m27.648s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m27.649s[0m [36m===========================[0m
+[33m29.185s[0m [1mresponse.Data.Output[0m=[36mIn this video, Laura Devizine, a Staff Engineer at Datadog, talks about transitioning from a startup to an established business and the tech debt that accumulates along the way. She emphasizes the importance of listening to understand why decisions were made in the past and how to establish credibility when coming in as an SRE from another company. She also talks about how to prioritize and scale efforts to make cultural and technological changes, and how to celebrate wins along the way. An interesting point she makes is that when transitioning from a startup to an established business, it is important to remember that the decisions made in the past were the best ones in the moment and to be clear that you believe they were the right way when they were done.[0m
+[33m29.186s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m29.187s[0m [1mresponse.Data.Output[0m=[36m- Startups take on technical debt in order to get their product out the door quickly. This includes features that can't scale, lack of API boundaries, and manual operations.
+        - As startups grow, they need to pay the interest on this technical debt by fixing issues and automating processes.
+        - New SRE teams joining established startups need to establish credibility by listening first and understanding why things were built the way they were. They should assume past decisions were the best at the time.
+        - SRE teams need to prioritize the most acute pain points and current reliability challenges to scope their work. They should start with focused, single team issues.
+        - SRE teams need to think about how to scale their efforts through cultural and technological changes. They should build tools and processes to help teams migrate.
+        - SRE teams should build incrementally, starting with small changes that show value quickly.
+        - Celebrate wins to maintain motivation and momentum for larger changes.
+        - The goal of SRE is sublinear scaling, not dogmatic implementation. Think about how the SRE toolkit solves specific problems.
+        - Automate things that engineers do manually to make a quick difference.
+        - Have engineers share changes within their teams to spread new practices.[0m
+[33m29.188s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m29.188s[0m [36m===========================[0m
+[33m29.189s[0m [36m===========================[0m
+[33m29.670s[0m [1mresponse.Data.Output[0m=[36m- Platforms in the context of development are considered products and should be treated as such.
+        - Automation, self-service, and minimizing coordination between groups are valuable and have a positive impact on companies.
+        - Companies with high developer velocity index experience significant annual growth and are more innovative.
+        - Providing a good developer experience leads to positive bottom line results for companies.
+        - A platform is a foundation of self-service APIs, tools, services, knowledge, and support arranged as a compelling internal product.
+        - Incorporating product owners and managers into platform and infrastructure teams is important for success.
+        - User research, including understanding the needs of developers and SREs, is crucial for building a successful platform.
+        - Balancing the needs of developers and infrastructure teams is essential for creating a platform that solves opposing factors.
+        - Measuring the impact of platform work and sharing the results can boost morale and provide a sense of accomplishment.
+        - Starting with a pre-integrated solution or platform can accelerate the process of building a successful platform.[0m
+[33m29.671s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m29.672s[0m [36m===========================[0m
+[33m29.703s[0m [1mresponse.Data.Output[0m=[36m- Adopting a product mindset is important for platform teams. This includes learning, marketing, measuring, and iterating. Platform teams should get product help.
+        - Doing user research through value stream mapping, journey mapping, and surveys is crucial to understand users' needs and pain points. Platform teams should hire UX help.
+        - Branding, marketing, and training are important for platform adoption but often overlooked. Platform teams need to advocate and engage with users.
+        - Measuring the right metrics like deployment frequency can help platform teams articulate their impact and build morale. But avoid weaponizing metrics.
+        - Starting with an integrated solution and customizing from there is often better than a DIY approach. It gets teams to the hard cultural and process challenges faster.
+        - To get started, form a dedicated platform team, pick one real app to develop the platform for, develop a golden path ideal state, and use an integrated solution.
+        - Platform adoption takes time - ramp up can be slow at first but then grow exponentially with proper marketing and seeding.
+        - Learn from other companies' experiences and best practices around building platforms.
+        - Avoid mandating platform usage - let adoption happen organically based on user desire.
+        - Building empathy and trust between platform and development teams is important.[0m
+[33m29.704s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m29.704s[0m [36m===========================[0m
+[33m31.233s[0m [1mresponse.Data.Output[0m=[36mTony, an executive consultant and advisor at VMware, shared lessons learned from running successful platforms for 7 years. He recommends incorporating product owners and managers into platforms and infrastructure teams, engaging with users regularly, and measuring the right things. He suggests starting with an integrated solution and building a golden path to represent the ideal 2B state. He also recommends rotating support engineers to provide ticketless support and treating engineers as users. Finally, he encourages people to check out JPMorgan Chase's process for doing this, as they have done some amazing things.[0m
+[33m31.234s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m31.234s[0m [36m===========================[0m
+[33m31.848s[0m [1mresponse.Data.Output[0m=[36mThis video is about the Alert Triage Hour of Power, a one-hour meeting held twice a month for the purpose of learning how to observe, query, inspect, analyze, and triage system alerts. It is designed to help SREs become confident and comfortable on call. The meeting follows an investigation of a low urgency alert, starting from the alert link in PagerDuty and ending with a recommendation to keep, tune, or delete the alert. The meeting also teaches active listening, scaffolding, articulation, coaching, and reflection. It has been running for three years and has grown from five regular attendees to 15-20, including product designers, product managers, and UX designers. The goal is to create confident, comfortable on-call operators who are excited to dive into the system and learn how to use observability tooling.[0m
+[33m31.849s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m31.850s[0m [36m===========================[0m
+[33m33.227s[0m [1mresponse.Data.Output[0m=[36m- The alert triage hour of power meeting was created to help engineers learn how to observe, query, and analyze the system through investigating low urgency alerts.
+        - The meeting had specific roles like facilitator, driver, scribe, and support crew to structure the investigation and learning process.
+        - Investigating alerts in a real production environment with stakes involved helped engineers learn and gain confidence.
+        - Engineers need knowledge of the system, telemetry, and business context to be effective on call.
+        - The alert triage meeting helped engineers realize that alerts are not precious and can be tuned or deleted if needed.
+        - Learning itself was a worthwhile goal of the meeting, not just fixing alerts.
+        - Active listening and guiding others through problems are skills that need to be developed.
+        - The alert triage meeting exemplified cognitive apprenticeship where experts shared their knowledge with novices in context.
+        - The alert triage meeting continued for years after the speaker left, showing its value for onboarding and developing engineers.
+        - While the meeting did not directly reduce alerts, it helped build confident engineers who could effectively manage production issues.[0m
+[33m33.229s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m33.229s[0m [1mresponse.Data.Output[0m=[36m- The speaker introduces the concept of "alert triage Hour of Power," a one-hour meeting held twice a month for learning how to observe, query, inspect, and analyze systems.
+        - The meeting focuses on investigating low urgency alerts and understanding their causes.
+        - The meeting follows a similar concept to pair programming or mob programming, with the goal of sharing knowledge and learning from experts.
+        - The speaker emphasizes the importance of active listening and the challenge of guiding others without simply providing answers.
+        - Learning is identified as a valuable goal in itself, and the meeting serves as a platform for continuous learning and skill development.
+        - The meeting helps develop confident and comfortable on-call operators who are equipped to handle system issues.
+        - The speaker highlights the importance of documentation and sharing learnings through writing.
+        - The meeting involves investigating alerts, analyzing metric queries, and exploring different possibilities to understand the cause of the alert.
+        - The meeting encourages reflection and synthesis of the investigation process to determine whether to keep, tune, or delete the alert.
+        - The alert triage practice has been successful and has expanded beyond engineering to include other roles, such as product design and management.[0m
+[33m33.230s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m33.230s[0m [36m===========================[0m
+[33m33.231s[0m [36m===========================[0m
+[33m34.097s[0m [1mresponse.Data.Output[0m=[36m- There is a lack of diversity in the field of site reliability engineering (SRE). Programs are needed to build a more diverse talent pipeline for SRE roles.
+        - Traditional hiring and recruiting pathways favor candidates from certain backgrounds and educational institutions, excluding many qualified candidates.
+        - There are few established pathways for people to enter the SRE field from university programs or early in their careers. SRE is not well known as a career option.
+        - The fellowship program run by Major League Hacking in partnership with Google SRE aims to provide training and opportunities for underrepresented developers to enter the SRE field.
+        - The pod structure of the fellowship program, with mentors and peer support, helps scale the program and provides a communal learning environment.
+        - The curriculum combines modules on SRE fundamentals with hands-on projects to build skills. Mock interviews help prepare candidates for the job market.
+        - Mentorship from experienced SREs helps fellows overcome technical and career hurdles.
+        - The fellowship program successfully improved fellows' understanding of SRE and prepared many for internships and jobs in the field.
+        - Creating a communal learning environment, taking a skills-based approach to training, and providing mentorship are key principles for effective SRE training programs.
+        - Programs that incorporate these principles can help build more diverse and inclusive SRE teams.[0m
+[33m34.098s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m34.099s[0m [36m===========================[0m
+[33m34.099s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the importance of building a diverse SRE talent pipeline and how to do it. Saleem and Alex from Google and Major League Hacking discussed how they have implemented programs like the Fellowship to provide early career developers with opportunities to bridge the gap between traditional software engineering roles and site reliability engineering. They discussed the importance of having a structured mentoring system, a focused curriculum, and mentorship to support program participants. They also shared their key recommendations for building a successful skill development program, such as focusing on real-world material, providing peer-to-peer support, and incorporating mock interviews. Finally, they shared some success stories of graduates from the Fellowship program who have gone on to land internships and jobs in SRE.[0m
+[33m34.100s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m34.101s[0m [36m===========================[0m
+[33m35.533s[0m [1mresponse.Data.Output[0m=[36m- Building a diverse talent pipeline is important for SRE teams.
+        - Training programs can help build a more diverse talent pipeline.
+        - There is a significant interest gap between software engineering and SRE roles.
+        - Many candidates need to build up skills to meet SRE expectations.
+        - Diverse individuals have often been excluded from the tech industry.
+        - Fellowship programs can provide skills training for promising candidates.
+        - SREs can come from various backgrounds, including boot camps and certification programs.
+        - The fellowship program accelerates SRE learning through structured mentoring.
+        - The program includes a pod approach for support and networking.
+        - The fellowship program has been successful in helping graduates land internships and jobs in SRE.[0m
+[33m35.536s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m35.536s[0m [36m===========================[0m
+[33m36.009s[0m [1mresponse.Data.Output[0m=[36m- Complex incidents are becoming more common due to increased system dependencies and abstractions. This makes it difficult to identify the root cause and scope of impact quickly.
+        - There is often a lack of proper platform observability and alerting which delays incident resolution.
+        - There is misalignment between SREs and managers which leads to wrong incentives and anti-patterns.
+        - Tooling built by non-practitioners is often incomplete and does not meet the needs of SREs.
+        - Developing "platform competence" - the ability to determine if the platform is healthy - is important for SREs.
+        - Coding skills are a prerequisite for SREs to understand complex systems and make good decisions.
+        - Managers should have some coding skills to review code, understand trade-offs, and empathize with SREs.
+        - Next-gen SRE tools should have features like observability, domain expertise, human-centric design, and situational awareness.
+        - In the future, with advances in AI, everyone may become a "platform engineer" and SREs may be needed to fix issues with AI systems.
+        - Developing platform competence with the right skills will help SREs fit into the future.[0m
+[33m36.010s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m36.011s[0m [36m===========================[0m
+[33m37.685s[0m [1mresponse.Data.Output[0m=[36mIn this video, the speaker discussed the importance of platform competence for SREs in the future. He outlined five areas of platform competence: capacity, risk, cost, incident management, and tooling. He also discussed the need for managers to have coding goals and to understand the code they are managing. He suggested that managers should invest in continuous improvement and use tooling to help manage their teams. He also discussed the need for next-gen tooling that can provide situational awareness and inclusive postmortems. Finally, he highlighted the importance of SREs in the future, as they will be the ones to fix AI when it breaks.[0m
+[33m37.686s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m37.687s[0m [1mresponse.Data.Output[0m=[36m- The talk is about the role of SREs in the future, especially in the context of increasing complexity due to abstractions, frameworks, and dependencies.
+        - Incidents are becoming more complex, making it difficult to identify the cause and impact scope.
+        - Calling the responsible service team becomes a common occurrence due to the complexity of systems, leading to frustration and burnout for SREs.
+        - The history of SRE teams shows a lack of clear definition and alignment of responsibilities.
+        - Incomplete SRE tooling and a crowded market of similar tools hinder effective incident management.
+        - "Platform competence" is a term coined to describe the ability to effectively manage production systems in areas like capacity, risk, cost, incident management, and tooling.
+        - Developing coding goals for leaders and managers helps them understand and appreciate the work of SREs.
+        - It is important for managers to have the ability to write and review code to make informed decisions and support their teams.
+        - Next-gen tooling should focus on making sense of instructive data, improving observability, and incorporating human-centric design and inclusive postmortems.
+        - SREs play a crucial role in fixing issues when AI systems fail, highlighting the need for the right skills and platform competence.[0m
+[33m37.687s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m37.688s[0m [36m===========================[0m
+[33m37.688s[0m [36m===========================[0m
+[33m38.170s[0m [1mresponse.Data.Output[0m=[36mThis video is about the role of an SRE Manager and the importance of understanding the basics of the role. It emphasizes the importance of trust and diversity of people in a team, and the need to prioritize one-on-ones with team members. It also highlights the importance of pushing back on unreasonable requests and calling out negative behaviors. The speaker also shares an interesting anecdote about how he learned the importance of being on call as a manager, and how it helped him understand the challenges his team was facing. Finally, he emphasizes the importance of creating systems to help remember certain things.[0m
+[33m38.171s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m38.172s[0m [36m===========================[0m
+[33m38.246s[0m [1mresponse.Data.Output[0m=[36m- The speaker became a manager in order to make a positive difference and improve the experiences of others.
+        - Being a manager involves emotional labor and difficult conversations, which can affect sleep and well-being.
+        - There is no perfect organization with flawless work management processes.
+        - When things go well, being a manager can be rewarding and impactful.
+        - Management and leadership are different, with management being more prevalent in larger, established companies.
+        - Managers have to deal with various aspects of the job, including coordinating with vendors, legal matters, and resolving conflicts.
+        - Hiring and creating work tickets are essential tasks for managers.
+        - The way people configure systems is often the cause of issues, not the systems themselves.
+        - Managers need to have visibility into the work their teams are doing and be able to explain the value they provide.
+        - Trust, communication, and diversity are crucial for building successful teams, and managers should prioritize fostering these qualities.[0m
+[33m38.247s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m38.248s[0m [36m===========================[0m
+[33m39.835s[0m [1mresponse.Data.Output[0m=[36m- As a manager, your progress and contributions must be visible to your team and business. You need to present and communicate this clearly.
+        - Managers should do on-call shifts to understand the challenges their engineers face and be able to effectively handle unplanned work.
+        - Managers should avoid "SRE silos" where knowledge is hoarded and only SREs are trusted to do the work.
+        - Managers should learn from incidents to identify systemic issues and reduce wasteful work.
+        - Managers should coach and teach their teams how to solve problems to distribute knowledge and gain more planned work.
+        - Diversity of people makes teams the best they can be through diversity of ideas and approaches. Managers should focus on an inclusive environment where people feel supported.
+        - Managers should have frequent one-on-ones with their team members to understand their work, provide feedback, and avoid surprises.
+        - Team members should document and keep track of their contributions to prepare for performance reviews and calibration sessions.
+        - As a manager, relationships with your team are more important than your technical brilliance.
+        - As a manager, don't repeat negative behaviors, throw people under the bus, or assume you're always right. Advocate for your teams.[0m
+[33m39.835s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m39.836s[0m [36m===========================[0m
+[33m40.654s[0m [1mresponse.Data.Output[0m=[36m- The document is based on a survey conducted over the summer with 559 responses.
+        - The report findings were published four months ago and include special contributions by Adrian Carcroft and Steve McGee.
+        - The report aims to explore the disconnects between reliability practitioners and management.
+        - The illusion of the "step back" is used to illustrate the concept of spotting differences from a distance.
+        - The document includes a role play scenario highlighting the challenges of communication between practitioners and management.
+        - Executives are generally less unsure compared to individual practitioners.
+        - The survey predates Dolly and mid-journey and chat GPT, and it would be interesting to see if there are any changes in future surveys.
+        - The document includes audience participation to compare survey responses with the preferences of the attendees.
+        - The report covers various topics such as challenges to achieving reliability goals, the contribution of SRE to business value, and engagement models of SREs within companies.
+        - The document emphasizes the importance of having new and better conversations and encourages readers to engage with the report and provide feedback.[0m
+[33m40.657s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m40.658s[0m [36m===========================[0m
+[33m41.746s[0m [1mresponse.Data.Output[0m=[36m- There is a disconnect between how individual contributors and executives view problems, challenges, and opportunities. They have different perspectives due to the distances at which they view things.
+        - Elite performing organizations, as measured by DORA metrics, place a high value on post-incident learnings in a blameless manner, regardless of company size.
+        - Hiring, retaining, and assimilating talent was identified as the number one challenge to achieving reliability goals.
+        - To make a successful case for change or investment, attach business value by tying it to revenue, brand/product, or efficiency gains.
+        - Capabilities or abilities are the gateway between technical details and business outcomes. Focusing the conversation around capabilities can help bridge the gap.
+        - Front end user experience monitoring ranked lower than expected given its importance to customer experience and satisfaction.
+        - Executives reported spending more time on-call than individual contributors.
+        - Respondents often reported their time allocation adding up to over 100%, indicating the categories were not exclusive.
+        - The survey data will be more useful and accurate with a larger number of respondents and a pilot group to improve the wording.
+        - The report findings will be used to donate to charities.[0m
+[33m41.747s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m41.748s[0m [36m===========================[0m
+[33m41.852s[0m [1mresponse.Data.Output[0m=[36mKurt Anderson and Leo Vasilo presented their SRE report 2023, which was based on a survey of 559 responses. They discussed the disconnect between reliability practitioners and management, and how to bridge the gap. They discussed the importance of attaching business value to reliability work, and the need to recognize SREs as a formal reporting structure. They also discussed the importance of client-side device or endpoint monitoring for user experience, and the need to prioritize capabilities over speeds and feeds. Finally, they encouraged viewers to help amplify the reach of the survey when it comes out, and to volunteer for their pilot group.[0m
+[33m41.853s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m41.854s[0m [36m===========================[0m
+[33m42.497s[0m [1mresponse.Data.Output[0m=[36mMorgan Stanley's Beacon service is an intelligent latency-aware and load shedding service routing system that helps to ensure quality of service to customers. It consists of three main components: a beacon router, a beacon status server, and a replication latency server. Beacon 2.0 was created to channelize the replicated data to specific platforms such as website, mobile, and active trader client. It also allows for manual override to the primary database in case of a replicant issue or maintenance. Morgan Stanley has applied Beacon to many services and deployed it to hundreds of nodes, and it has handled over 2.6 million calls in total. Additionally, Morgan Stanley offers many other services such as market analysis, wealth management research, and market making, as well as an in-house startup accelerator and sustainable investing initiatives.[0m
+[33m42.497s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m42.498s[0m [36m===========================[0m
+[33m43.931s[0m [1mresponse.Data.Output[0m=[36m- Ticketmaster had issues handling the high demand for Taylor Swift concert tickets, with fans waiting in queues for hours and the website being unreachable.
+        - Financial services websites also face challenges handling spikes in traffic during market swings and news events.
+        - Beacon is an in-house service Morgan Stanley created to intelligently route traffic to either replica databases or primary databases based on latency.
+        - Beacon 1.0 had some operational burdens as it sampled latency from only one database per module. This required manual overrides when there were replication issues.
+        - Beacon 2.0 improved on this by tracking latency for each domain database separately. This allows Beacon to operate independently for each domain.
+        - Beacon is configured to intercept requests and route them based on key values extracted from the requests.
+        - Metrics show that Beacon is able to route over 75% of traffic to replica databases during market open, reducing load on primary databases.
+        - Morgan Stanley focuses on areas beyond markets like supporting entrepreneurs and education programs.
+        - Whyjun, the creator of Beacon, worked with Jason to improve and implement Beacon 2.0.
+        - Beacon allows Morgan Stanley to provide quality of service to customers while ensuring performance and resilience.[0m
+[33m43.932s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m43.933s[0m [1mresponse.Data.Output[0m=[36m- The video discusses the concept of intelligent latency-aware and load shedding service routing.
+        - The Ticketmaster load shedding and Taylor Swift incident from last November is mentioned as an example of the challenges faced during high-demand events.
+        - Morgan Stanley created an in-house service called Beacon to creatively solve database latency issues.
+        - Beacon architecture has been improved over time to handle load distribution in large financial service systems.
+        - Database replication and vertical partitioning are commonly used to provide read-only copies for resilience and performance.
+        - Beacon consists of three main components: beacon router, beacon status server, and replication latency server.
+        - Beacon uses intelligent routing to direct services to either read-only replicas or primary data servers based on latency.
+        - Beacon 2.0 architecture allows for independent routing of data queries to different domain databases, reducing the impact of slow replicants on other domains.
+        - Beacon is configuration-driven and can be applied to various services and deployed to multiple nodes.
+        - Beacon has been successful in handling high traffic and load shedding, with a majority of calls being directed to read-only replicas.[0m
+[33m43.933s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m43.934s[0m [36m===========================[0m
+[33m43.935s[0m [36m===========================[0m
+[33m44.749s[0m [1mresponse.Data.Output[0m=[36mThis video discussed resiliency practices in managing CDN (Content Delivery Network) for Netflix. It discussed three types of failure exercises they do: stack failure, stack overload, and anycast domain. They have a close loop between the OCA, client, and control plane to ensure resiliency. They also measure latency, app TTR, and other metrics to ensure that the clients are behaving properly. They also discussed the importance of culture in ensuring resiliency, and that everyone should have the same culture of wanting to not fail and if it does, fail gracefully. It was interesting to learn about the different types of failure exercises they do to ensure resiliency.[0m
+[33m44.750s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m44.751s[0m [36m===========================[0m
+[33m44.758s[0m [1mresponse.Data.Output[0m=[36m- Netflix has a large content delivery network called Open Connect to serve its streaming traffic globally. It has over 18,000 OCA servers deployed in over 6,000 locations across 175 countries.
+        - Infrastructure failures like fiber cuts and power outages and software failures like firmware issues are the two main types of failures Netflix deals with in its CDN.
+        - Netflix clients and servers are designed to be resilient to infrastructure failures by having multiple failure domains and the ability to switch to alternate servers seamlessly when one fails.
+        - Netflix conducts failure exercises at peak traffic times by inducing failures like shutting down line cards to test the resilience of its system.
+        - Netflix monitors key metrics like bitrate, play delay, and rebuffers during these tests to ensure good user experience.
+        - Netflix also conducts overload tests by doubling traffic to some servers for weeks to test their resilience under extreme load.
+        - Culture and communication play an important role in building resilience by ensuring everyone is on the same page and motivated to minimize failures.
+        - Netflix looks for patterns in failures to identify areas for improvement and works with teams to address issues proactively.
+        - Netflix applies the same resilience principles to new services from the start, not as an afterthought.
+        - Netflix embraces failures as learning opportunities to improve its systems.[0m
+[33m44.759s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m44.759s[0m [36m===========================[0m
+[33m46.100s[0m [1mresponse.Data.Output[0m=[36m- The focus of the talk is on resiliency practices in managing CDN (Content Delivery Network).
+        - The speaker discusses the infrastructure level failures that occur frequently, such as fiber cuts and localized outages.
+        - The speaker emphasizes the need to ensure that Netflix clients have enough resiliency to handle day-to-day outages.
+        - The speaker explains the stack failure test, where traffic is load balanced between two stacks of servers, and the importance of handling the Thundering Herd of traffic during a stack failure.
+        - The speaker discusses the stack overload test, which is done to ensure that the clients can handle an increase in traffic when a show becomes popular.
+        - The speaker highlights the importance of testing and maintaining the close loop between the OCA, client, and control plane systems to handle failures gracefully.
+        - The speaker mentions the testing of anycast, a critical service for Netflix, to understand the impact of regional failures on traffic routing.
+        - The speaker discusses the importance of resiliency for new services, such as live streaming, and the need to address failure domains during the launch.
+        - The speaker emphasizes the culture of embracing failure and planning for it to ensure continuous improvement in resiliency.
+        - The speaker mentions the importance of having a shared culture of not wanting to fail and gracefully handling failures within the organization.[0m
+[33m46.101s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m46.101s[0m [36m===========================[0m
+[33m46.695s[0m [1mresponse.Data.Output[0m=[36mThis talk by SREcon23 Americas discussed why SRE work is hard and how to navigate the constraints of the job. It discussed the finite nature of resources, the adaptive universe, complexity, and the need for coordination. It also discussed Ashby's Law of Requisite Variety, which states that only variety can destroy variety, and how this applies to SRE work. It also discussed the need to make work visible and the difficulty of communication and coordination. The takeaway from this talk is that SRE work is hard, but we can get better at navigating the constraints of the job by treating the skills involved in operations work as a first-class thing.[0m
+[33m46.696s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m46.696s[0m [36m===========================[0m
+[33m48.333s[0m [1mresponse.Data.Output[0m=[36m- Our work as SREs is difficult due to finite resources and unstoppable change. We have limited time, headcount and capacity that is always stretched to the limit.
+        - Change is dangerous and often breaks things, but we cannot stop change. Certificates expire, time moves on regardless of code freezes.
+        - We only see part of the system from our limited perspective, lacking a global view. This leads to hidden interactions and issues we are unaware of.
+        - Increasing robustness and adding controls to prevent failures makes systems more complex over time. But we lack the resources to properly reduce complexity.
+        - Effective communication and coordination between teams is difficult due to partial understanding of systems and work that is ephemeral and invisible.
+        - We have to navigate constraints like finite resources, unstoppable change, complexity and lack of global view to do our work effectively.
+        - We cannot eliminate constraints but can get better at working within them. Treating operational skills as first-class is important.
+        - "You can't stop the waves but you can learn to surf." We cannot change the challenges we face but can get better at navigating them.
+        - Watching experts in action is one of the best ways to improve, but work itself is ephemeral and hard to observe directly.
+        - The hardest problem is getting the right information into the heads of the people who need it, and this problem gets exponentially harder at scale.[0m
+[33m48.334s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m48.335s[0m [36m===========================[0m
+[33m48.335s[0m [1mresponse.Data.Output[0m=[36m- The job of an SRE (Site Reliability Engineer) is inherently difficult and challenging.
+        - The finite nature of resources, such as time and manpower, poses a constant challenge for SREs.
+        - Systems are always subject to change, making it harder for SREs to keep them up and running.
+        - Code freezes can be used to mitigate the risk of system failures during critical periods, but they are not without their drawbacks.
+        - The cost of an outage varies depending on when it occurs, with certain times being more costly than others.
+        - Complexity is inherent in systems, and efforts to increase robustness often lead to increased complexity.
+        - SREs are essentially in the control systems business, constantly working to keep systems up and running.
+        - Partial knowledge of systems and hidden interactions can make it difficult to fully understand and prevent failures.
+        - Communication and coordination among team members are crucial but challenging aspects of SRE work.
+        - While constraints cannot be eliminated, SREs can improve their effectiveness by treating operations work as a first-class skill.[0m
+[33m48.336s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m48.337s[0m [36m===========================[0m
+[33m48.821s[0m [1mresponse.Data.Output[0m=[36m- Modeling systems and incidents using formal methods like TLA+ can help gain insights beyond what is possible through traditional analysis of metrics and reports.
+        - The modeling process forces you to think through and clarify your understanding of how the system is supposed to work and identify gaps in that understanding.
+        - The model checker can then determine if your model matches reality by finding inconsistencies and counter examples. This helps identify the root cause of issues.
+        - The key is to create a simplified but accurate model that focuses only on the relevant details for the particular incident or problem.
+        - For the Cosmos DB incident, modeling revealed that the failure to share session tokens between the dispatcher and worker processes led to inconsistent views of the data.
+        - The mitigation deployed during the incident did not actually fix the underlying design issue - it just worked around one consequence of the problem.
+        - Simplifying the system into a model that a human can understand helps get past the layers of abstraction and complexity in the real code.
+        - The modeling process and results can be shared with others to confirm and improve the understanding of the system and incident.
+        - Formal modeling tools like TLA+ allow considering all possible states and branching possibilities in a logical and mechanical way that is beyond human capabilities.
+        - The resulting models can then be used to reason about potential fixes and design changes before implementing them in the real system.[0m
+[33m48.821s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m48.822s[0m [36m===========================[0m
+[33m50.588s[0m [1mresponse.Data.Output[0m=[36m- The incident report discussed in the video involved a 28-day long incident at Microsoft Azure.
+        - The incident led to a big redesign project because the underlying design level problem couldn't be identified.
+        - The proposed solution is to use TLA+ to model the problem as a documentation practice.
+        - TLA+ is a language that can be fully interpreted by a machine, allowing for running the Checker to identify consequences and understand the incident.
+        - The incident involved a system optimization that made the system run too fast, causing latencies to get out of line.
+        - The incident was related to Cosmos DB, a planet-scale key-value store used for storing data in distributed systems.
+        - Cosmos DB has different consistency levels, and the incident occurred in the session consistency mode.
+        - The video demonstrates the process of modeling the incident using TLA+ and running the Checker to identify the problem.
+        - The issue was related to session tokens not being shared properly, causing incorrect behavior in the system.
+        - The modeling process helped uncover the design-level problem and provided insights beyond the abilities of individuals analyzing the incident report.[0m
+[33m50.590s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m50.591s[0m [36m===========================[0m
+[33m50.592s[0m [1mresponse.Data.Output[0m=[36mIn this video, Marcus, Josh, and Ben discussed how they used TLA+ to turn an incident report into a design issue. They used TLA+ to model the system and create a simplified explanation that a human could understand. They then used the Checker to see if their statement was true, and found that the issue was that session tokens weren't being shared. This allowed them to investigate beyond the ability of any one or two people, and they were pleasantly surprised to find that they were able to get the problem down to a simple example.[0m
+[33m50.593s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m50.598s[0m [36m===========================[0m
+[33m51.068s[0m [1mresponse.Data.Output[0m=[36m- Coinbase exchange has a high performance matching engine that can achieve 1 microsecond processing time for orders. This is achieved through a deterministic state machine model and optimizations at the system and application level.
+        - Achieving low latency on public clouds like AWS is challenging due to lack of control over hardware, network topology and latency. Optimizations need to be made at the compute, storage and network level.
+        - Network latency dominates the overall latency budget, even with optimized code. Custom forwarding switches and placement within AWS regions and availability zones can help reduce network latency.
+        - Application level optimizations like using primitive data types, avoiding string operations and object allocations can improve performance.
+        - Warm-up issues due to JIT compilation can be addressed using tools like Azul Zulu Prime that can pre-compile and optimize code.
+        - Tracing and metrics need to be collected to identify bottlenecks in the happy and unhappy paths of a request.
+        - Issues like scheduler delays, excessive goroutines and unnecessary fsync operations can cause high latency spikes.
+        - Optimizing an existing legacy system requires understanding its architecture and flow through tracing and metrics.
+        - Golang has some performance advantages like no JVM warmup but also downsides like pointer passing inefficiency.
+        - The key to optimizing performance is identifying components that should not exist in the first place.[0m
+[33m51.069s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m51.070s[0m [36m===========================[0m
+[33m52.617s[0m [1mresponse.Data.Output[0m=[36m- The video discusses the architecture and learnings from setting up the Coinbase exchange system.
+        - The three critical components of the trading system are market data, execution, and settlement.
+        - The trading system processes orders in a serialized manner, but different markets can be separated after execution.
+        - The trading system is treated as a deterministic state machine, allowing for snapshots and replays.
+        - The system achieves ultra-low latency, with processing times in the microseconds range.
+        - Migrating to the AWS cloud provides benefits such as collaboration and personal development environments.
+        - Challenges in the cloud include understanding machine families, networking, and maintaining both on-premises and AWS systems.
+        - Network latency is a dominant factor in the system's performance, and understanding AWS's internal network setup is crucial.
+        - Debugging and optimizing the system involves analyzing end-to-end latencies and creating component-level dashboards.
+        - The Legacy system written in Go has its own challenges, such as warm-up issues and potential overhead from libraries used.[0m
+[33m52.620s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m52.621s[0m [36m===========================[0m
+[33m52.624s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the architecture of Coinbase's exchange system and how it was optimized for ultra low latency trading. It discussed the challenges of running the system on AWS, such as understanding the different machine families and the network latency between AZs. It also discussed the importance of creating a dashboard to monitor end-to-end latencies and the use of Golang to write code for the Legacy system. An interesting point was the visualization of the system as a highway with cars representing Go routines and drivers switching between them randomly. This gave an insight into how the system works and how it can be optimized for better performance.[0m
+[33m52.625s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m52.625s[0m [36m===========================[0m
+[33m53.247s[0m [1mresponse.Data.Output[0m=[36mThis video is about the Network Error Logging (NEL) system used by Wikipedia to detect and diagnose network issues. NEL is a W3C draft that is currently supported by Chrome, Opera, and other Chromium derivatives. It provides useful metadata such as the URL, type of error encountered, user's IP address, and internet service provider. Wikipedia also uses its own open source authoritative name server, Gdnsd, to reduce latency and its own traffic stack to track IP location. NEL has been useful in detecting issues that would have otherwise been hard to track down, such as a truncation issue and a network outage. It has also been used to measure an end-to-end user SLO for RCDM and to do latency mapping. There are off-the-shelf solutions available for using NEL, but it is also possible to do it yourself.[0m
+[33m53.248s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m53.249s[0m [36m===========================[0m
+[33m54.684s[0m [1mresponse.Data.Output[0m=[36m- Wikimedia runs the infrastructure for Wikipedia and other projects like Wiktionary and Wikivoyage. They administer the projects and run the servers.
+        - Wikimedia uses open source solutions wherever possible and runs their own bare metal servers in rented data centers.
+        - Wikimedia has around 1,800 physical servers across multiple data centers to handle their traffic load of up to 200,000 requests per second.
+        - The speaker implemented network error logging (Nell) at Wikimedia to receive error reports from users' browsers when they encounter issues. This provides visibility into network issues.
+        - Nell reports provide useful details like the URL, error type, and user location which helps Wikimedia diagnose network problems.
+        - Certain error types in Nell reports like TCP timeouts are good indicators of major network issues, while others are more noisy.
+        - Nell reports helped Wikimedia identify and fix issues like PDF corruption and localized network outages.
+        - Nell reports from users provided evidence that helped Wikimedia's DDoS protection provider identify and resolve issues affecting users in Italy.
+        - The speaker discusses potential plans to extend the use of Nell reports to measure service level objectives and do latency mapping.
+        - The speaker notes that while Nell provides useful visibility, it also comes with caveats like potential for cascading failures and background noise.[0m
+[33m54.685s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m54.687s[0m [1mresponse.Data.Output[0m=[36m- Wikipedia is a non-profit and open-source project that is also a top 10 website.
+        - Wikipedia runs its own infrastructure and uses open-source solutions whenever possible.
+        - Wikipedia prioritizes privacy and does not use cloud providers for anything in the user query path or containing personally identifiable information (PII).
+        - Wikipedia's infrastructure includes application servers, database servers, memcaches, Kubernetes clusters, and CDN Edge.
+        - Wikipedia uses Network Error Logging (Nell) to receive error reports from users' browsers, providing free network telemetry from half of its user base.
+        - Wikipedia sets a sampling rate for error reports to avoid receiving unfixable or irrelevant reports.
+        - Wikipedia uses its own authoritative name server called G dnsd to reduce fate sharing and latency for Nell reports.
+        - Nell reports include metadata such as URL, error type, user's IP address, elapsed time, and response code.
+        - TCP timed out and TCP address unreachable are important signals for identifying network issues.
+        - Nell reports have helped Wikipedia detect and resolve network issues, track localized outages, and improve overall performance.[0m
+[33m54.688s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m54.689s[0m [36m===========================[0m
+[33m54.689s[0m [36m===========================[0m
+[33m55.604s[0m [1mresponse.Data.Output[0m=[36mDavid Amine from Duolingo shared a story about how they avoided a "cachepocalypse" in their large Python monolith. They had been paged about the issue multiple times, but ownership was unclear. After aligning on the stakes, two teams worked on the problem: one on spinning up a secondary memcache cluster and the other on debugging the monolith. They eventually found a nested read in a module that was causing duplicate connections, but when they removed the cache read from staging, it caused a global Spanish outage. After flushing the cache nodes, they were able to recover. They eventually found that a non-backwards compatible change in the library was causing the issue, and they were able to fix it with a Quick Fix. The story highlights the importance of making space for people to volunteer and creating a safe environment to take risks.[0m
+[33m55.605s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m55.606s[0m [36m===========================[0m
+[33m56.938s[0m [1mresponse.Data.Output[0m=[36m- Duolingo runs a large Python monolith that is about 10 years old and mostly in maintenance mode.
+        - They were seeing duplicate connections to the first memcache node, which was nearing the connection limit and threatening to bottleneck their ability to scale. They called this the "cache apocalypse."
+        - The issue had unclear ownership, so it had gone unaddressed for some time.
+        - They were able to motivate engineers to work on the problem by clarifying the business stakes and impact if left unfixed.
+        - Their initial debugging attempts were slow due to long iteration times and lack of observability into the monolith.
+        - The engineer inadvertently caused a Spanish outage by deploying a change to staging that shared a cache with production.
+        - They were able to fix the duplicate connection issue by investigating the problem in a local development environment with proper tools.
+        - Important factors in their success were motivating volunteers, understanding the stakes, and making it safe for engineers to take risks and make mistakes.
+        - Investing in a better local development story would have helped them avoid the production outage.
+        - After fixing the immediate issue, they were able to make longer-term improvements to prevent it from becoming a bottleneck again.[0m
+[33m56.940s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m56.941s[0m [36m===========================[0m
+[33m56.942s[0m [1mresponse.Data.Output[0m=[36m- The company, Duolingo, operates on a combination of microservices and a legacy monolith architecture.
+        - There was a bug in the monolith that caused duplicate connections to the cache, leading to a potential scalability issue.
+        - Ownership of the bug was unclear, causing delays in addressing the problem.
+        - Engineers organized a meeting with stakeholders to discuss the stakes and prioritize fixing the bug.
+        - Various potential solutions were considered, including introducing a memcache proxy tier and reducing resource usage.
+        - One team pursued the approach of setting up a secondary memcache cluster, while another team focused on debugging the monolith.
+        - Debugging the monolith was challenging due to limited expertise and slow testing iterations in the staging environment.
+        - Several attempts to fix the bug, such as upgrading the cache library and closing unused connections, were unsuccessful.
+        - The decision was made to remove all cache code from the monolith in staging to identify the source of the issue.
+        - The bug was eventually traced to a non-backwards compatible change in the cache library, which caused data corruption and a production outage. A fix was implemented by passing configuration options in the constructor.
+        - The importance of creating a safe environment for taking risks and having a backup plan was highlighted.
+        - Investing in fast and safe debugging tools and improving the local development environment could have helped avoid the production outage.
+        - The urgent response and successful fix allowed the company to scale beyond the bottleneck and continue providing quality service to users.
+        - Long-term improvements were made to prevent similar cache connection issues in the future.[0m
+[33m56.943s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m56.943s[0m [36m===========================[0m
+[33m57.446s[0m [1mresponse.Data.Output[0m=[36m- Incident archeology involves analyzing past incidents and artifacts to extract valuable insights and learnings that can improve future incident handling.
+        - Incident reports and postmortems are important for communication, accountability, coordination, and learning from incidents. However, engineers often find the process heavyweight and ambiguous.
+        - Analyzing a collection of past incidents can provide useful insights even without doing in-depth investigations of individual incidents. This breadth approach can still reveal patterns and trends.
+        - Metrics like mttr and complexity are difficult to measure accurately and may not provide useful insights when analyzed in aggregate.
+        - Postmortems are not always conducted after incidents, even when required. Reasons include the meeting happened but was not documented, and ambiguity around the postmortem process.
+        - Incidents with higher productivity impacts are more likely to have postmortems conducted, showing people are more motivated when incidents affect them more.
+        - There is no consensus on what defines the start and end of an incident, and focusing too much on these times may not be useful.
+        - Uptime success can hide problems with productivity impacts from incidents.
+        - Most incidents are declared during business hours, showing where on-call coverage may be needed.
+        - Only a minority of incidents are caused by internal changes, with most related to changes in the environment.[0m
+[33m57.447s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m57.448s[0m [36m===========================[0m
+[33m57.448s[0m [1mresponse.Data.Output[0m=[36mIn this video, the speaker talks about the value of incident archeology and how it can be used to extract value from paperwork and narratives. They discuss how they looked at every incident for a year in their corner of Spotify and found some interesting results, such as almost no incidents happening at night and postmortems only happening 55% of the time. They also discuss how they leaned on user researchers to talk to internal developers to find out why postmortems weren't happening and how they implemented lighter weight options and training to improve the process. They also found that incidents that spread wide through the organization were more likely to have postmortems, while lower impact incidents were less likely. Finally, they discuss how to do incident archeology, suggesting to find artifacts, make hypotheses, and keep the scope within a time box.[0m
+[33m57.449s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m57.450s[0m [36m===========================[0m
+[33m58.983s[0m [1mresponse.Data.Output[0m=[36m- The speaker is an incident manager at Spotify and has a background in tech.
+        - The purpose of the talk is to promote psychological safety and share a process called incident archaeology.
+        - Incident archaeology involves extracting value from paperwork and narratives related to incidents.
+        - The speaker emphasizes the importance of sharing incident information publicly and encourages others to do the same.
+        - The talk focuses on the breadth of incidents and what can be learned from them collectively.
+        - The value of incident reporting is discussed, including communication, accountability, coordination, and learning.
+        - The speaker acknowledges the burden of incident-related tasks and the need to find a balance.
+        - The speaker shares the results of their incident analysis, including insights on incident occurrence during different times of day and the impact of postmortems.
+        - The importance of data analysis and involving data scientists in the process is highlighted.
+        - The speaker encourages others to conduct their own incident analysis and provides a simple methodology for doing so.[0m
+[33m58.984s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m58.985s[0m [36m===========================[0m
+[33m59.804s[0m [1mresponse.Data.Output[0m=[36m- The speaker argues that focusing on good "followship" rather than just leadership can improve incident response and coordination within organizations. Followers who anticipate needs, provide information, and signal intentions can help smooth coordination.
+        - High cognitive and coordinative demands are inherent in incident response work but often go unnoticed or unappreciated.
+        - Having common ground with knowledge about teammates, systems, goals, and dependencies can lower the costs of coordination during incidents.
+        - Fellowship relies on mutual knowledge, assumptions, and technical knowledge about the system and organization.
+        - Blaming and shaming after incidents drives important information underground and inhibits effective coordination.
+        - Observing how teams interact and coordinate, talking about coordination challenges, and analyzing cognitive demands can help improve fellowship and coordination.
+        - Developing a shared language around cognitive processes and coordination can enhance good fellowship.
+        - Lowering the costs of coordination can help responders deal with the uncertainty and time pressures of incidents.
+        - Proactively providing information, signaling intentions, and relaxing goals can show good followship.
+        - Preparing oneself by reading backlogs and asking clarifying questions can make one useful during an incident.[0m
+[33m59.805s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m59.806s[0m [36m===========================[0m
+[33m61.016s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the importance of organizational response to incidents and how to design for smooth coordination. It highlighted the need to understand the cognitive work that goes into incident response, such as perceiving, reasoning, attending, and acting. It also discussed the importance of fellowship, which involves anticipating the sequencing of work, initiating work and communications, and signaling intentions to others. An example of this was given with traffic, where people adjust their actions relative to the flow of events and signal their intentions to others. Finally, the video discussed the importance of having good common ground and talking about cognitive and coordinative demands to enhance good fellowship.[0m
+[33m61.017s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m61.019s[0m [36m===========================[0m
+[33m61.020s[0m [1mresponse.Data.Output[0m=[36m- Incident response requires multiple perspectives and knowledge bases to handle complex problems.
+        - The cognitive load of coordinating multiple perspectives can slow down incident response.
+        - Freelancing and lack of effective coordination can further slow down incident response.
+        - Developing strategies for effective coordination is crucial in incident response.
+        - Cognition plays a significant role in incident response, including perception, reasoning, memory, and focus.
+        - Paragliding can provide insights into rapid cognitive processes similar to incident response.
+        - Fellowship in incident response involves anticipating, initiating, and signaling coordination efforts.
+        - Smooth coordination in incident response can be compared to the choreography of traffic flow.
+        - Lurkers in incident channels can provide valuable insights and reframing of problems.
+        - Developing a common ground and shared knowledge base improves coordination in incident response.[0m
+[33m61.021s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m61.021s[0m [36m===========================[0m
+[33m61.566s[0m [1mresponse.Data.Output[0m=[36m- OpenTelemetry is a set of tools and standards for collecting telemetry data from applications in a vendor-agnostic way.
+        - It allows companies to instrument their applications once and send the data to any observability vendor.
+        - OpenTelemetry includes SDKs, APIs, and auto-instrumentation agents to capture metrics, traces, and logs.
+        - An APM (Application Performance Monitoring) system allows you to instrument, monitor, and understand your applications using telemetry data and dashboards.
+        - The demo showed how OpenTelemetry data can be sent to Prometheus, Jaeger, and Loki and visualized in Grafana.
+        - OpenTelemetry is still early and some parts like metrics and logging are still maturing.
+        - In around 6 months, OpenTelemetry may be ready to build a full APM solution using metrics and logs.
+        - When applications and libraries are instrumented using OpenTelemetry standards, it enables better insights across vendors.
+        - The vision of a standardized telemetry format is promising but there is still work to be done to realize that vision.
+        - Contributing to OpenTelemetry semantic conventions can help accelerate its progress.[0m
+[33m61.567s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m61.567s[0m [36m===========================[0m
+[33m62.993s[0m [1mresponse.Data.Output[0m=[36m- Open Telemetry is a solution to the problem of having to re-instrument applications when switching observability vendors.
+        - Open Telemetry is a collection of tools, APIs, and SDKs that allow for easy instrumentation of applications.
+        - The data collected with Open Telemetry can be sent to any vendor or open source project.
+        - Open Telemetry has a strong community backing and is supported by many observability vendors.
+        - APM (Application Performance Monitoring) can be defined as a system that allows for easy instrumentation of applications and provides high-quality telemetry and dashboards for monitoring and understanding application performance.
+        - Open Telemetry offers a robust auto-instrumentation agent that simplifies the process of instrumenting applications.
+        - Open Telemetry has a demo application that showcases its capabilities in multiple languages.
+        - Open Telemetry integrates with popular observability tools like Prometheus, Jaeger, and Loki.
+        - Open Telemetry allows for correlation between logs, traces, and metrics, making it easier to debug and monitor applications.
+        - Open Telemetry is still in its early stages, with metrics and logging functionalities still being developed, but it is expected to become a powerful tool for building APM solutions in the future.[0m
+[33m62.994s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m62.996s[0m [36m===========================[0m
+[33m63.087s[0m [1mresponse.Data.Output[0m=[36mIn this video, Dautom explains what OpenTelemetry is and how it can be used to build an APM (Application Performance Monitoring) system. OpenTelemetry is a collection of tools, APIs, and SDKs that can be used to instrument applications and send the data to a collector. It supports almost all the major vendors and open source projects, and has a robust set of auto-instrumentation agents. Dautom then goes on to demonstrate how OpenTelemetry can be used to build an APM system, using a demo application. He shows how it can be used to monitor services, logs, and traces, and how it can be used to jump from logs to traces. He also mentions that OpenTelemetry is still in its early stages, and that it will take around 6 months for it to be fully usable.[0m
+[33m63.088s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m63.089s[0m [36m===========================[0m
+[33m63.695s[0m [1mresponse.Data.Output[0m=[36mTierra Ortiz, a Senior CDN Reliability Engineer at Netflix, discussed how Netflix measures the real-life latency of the internet. Netflix serves over 100 million view con hours of content on their platform and has over 230 million members in 175 different countries. To ensure their members have a great quality of experience, Netflix uses metrics such as bit rate, rebuffers, play delay, and latency. To store this data without sacrificing accuracy, Netflix uses an open source data structure called T Digest. This data structure allows Netflix to extract insights from the data and do capacity planning and anomaly detection. It also allows them to understand the impact of internet congestion under the best and worst circumstances. An interesting story was shared about how Google Maps underestimated the time it took to get to the airport, highlighting the importance of monitoring traffic congestion.[0m
+[33m63.696s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m63.697s[0m [36m===========================[0m
+[33m63.698s[0m [1mresponse.Data.Output[0m=[36m- The speaker, Tierra Ortiz, shares her personal experience with latency in online gaming and how it affected her gameplay.
+        - Netflix serves over 100 million view con hours of content every day, emphasizing the need for a reliable and high-quality streaming experience.
+        - Netflix manages its own content delivery network (CDN) called Open Connect to provide the best viewing experience for its members.
+        - Netflix partners with internet service providers worldwide to distribute its servers and move content closer to its members.
+        - Netflix has over 230 million members in 175 countries and deploys over 18,000 servers globally.
+        - Despite having a small CDN reliability team of only 14 people, Netflix efficiently monitors and analyzes data to ensure a great quality of experience for its members.
+        - Netflix defines quality of experience using metrics such as bit rates, rebuffers, play delay, and latency.
+        - Latency, measured as round trip time (RTT), is an important metric for Netflix to understand the responsiveness of its service.
+        - Netflix uses a data structure called T digest to summarize and store RTT data without sacrificing accuracy or using excessive memory.
+        - Analyzing RTT data helps Netflix identify latency patterns, segment data by location, and make informed decisions for capacity planning and anomaly detection.[0m
+[33m63.699s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m63.700s[0m [36m===========================[0m
+[33m65.231s[0m [1mresponse.Data.Output[0m=[36m- The speaker grew up in a rural area with poor internet connection, which impacted her gaming experience and made her blame her losses on latency.
+        - As a Netflix engineer, the speaker's team ensures members have a great viewing experience by managing their own content delivery network called Open Connect.
+        - Netflix uses metrics like bitrate, rebuffers, play delay and latency to define quality of experience for members.
+        - Looking at minimum, maximum and average round trip times (RTT) can be misleading, so Netflix looks at the distribution of RTT samples for a session.
+        - Netflix uses T-digest, an efficient data structure, to collect and analyze RTT data without using too much memory.
+        - T-digest allows Netflix to extract insights with low overhead and gain better data.
+        - Monitoring RTT helps Netflix improve capacity planning and perform anomaly detection.
+        - Internet conditions are constantly changing, so ongoing RTT monitoring is important.
+        - Netflix needs to understand the impact of internet congestion under best and worst circumstances.
+        - RTT can increase due to networking changes that cause clients to take longer routes, highlighting the need for constant monitoring.[0m
+[33m65.234s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m65.236s[0m [36m===========================[0m
+[33m65.844s[0m [1mresponse.Data.Output[0m=[36m- Distributed tracing helps understand software behavior by tracing transactions across services and network calls. It helps identify performance issues and failures.
+        - Distributed tracing is still difficult to use for most engineers. Few people are experts in it and it is often a last resort for debugging.
+        - Open Telemetry aims to provide a standard for instrumenting software and collecting telemetry data. This could reduce vendor lock-in and make it easier to switch telemetry providers. However, there are still issues with the data quality and instrumentation.
+        - Auto instrumentation and integration with other tools could make distributed tracing easier to use. But it is still hard to consume tracing data and profiling information.
+        - Instrumenting client-side code for distributed tracing is challenging due to payload size limits and the asynchronous nature of front-end code.
+        - Metrics should be derived from events and structured data, not collected separately. This provides more context and insight.
+        - Vendors like DataDog are expensive but provide little value for software engineers. Tools that speak the language of code are more useful.
+        - Money and cost savings are often the drivers for organizations to reconsider their observability stack and consider distributed tracing.
+        - Instrumenting as you debug and fix issues can help gain traction for a distributed tracing initiative.
+        - Events and spans are becoming synonymous with observability, and more vendors will likely adopt this model.[0m
+[33m65.845s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m65.846s[0m [36m===========================[0m
+[33m67.277s[0m [1mresponse.Data.Output[0m=[36mThis video featured two founders/CTOs discussing the future of distributed tracing. They discussed the popularity of both Honeycomb and Sentry, the need for better instrumentation and testing, the importance of network effects, the difficulty of using profiling data, and the need for distributed tracing to connect to the back end. They also discussed strategies for organizations to make the shift to distributed tracing, such as debugging as they go and using AI Ops to filter out alerts. It was interesting to hear the different perspectives of the two founders/CTOs on the future of distributed tracing.[0m
+[33m67.278s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m67.279s[0m [36m===========================[0m
+[33m67.296s[0m [1mresponse.Data.Output[0m=[36m- The speaker acknowledges the competitive nature of the software industry but appreciates the bravery of the two individuals on stage representing different companies.
+        - There is a high level of enthusiasm for both Honeycomb and Sentry, two companies offering distributed tracing solutions, from different groups of developers.
+        - The speaker believes that microservices introduce the need for distributed tracing, but monoliths can also benefit from better tooling for signaling and tracing intent.
+        - The speaker expresses skepticism towards the need for a new specification for logs, stating that existing log specifications have been around for decades.
+        - The speaker has mixed opinions about open tracing and open telemetry, acknowledging their benefits but also pointing out flaws and challenges in their implementation.
+        - The speaker believes that logs are primarily used for compliance and security purposes, and that there are better solutions, such as tracing or Sentry, for debugging.
+        - The speaker criticizes the notion that logs should never be dropped, suggesting that vendors use this idea to justify higher costs.
+        - The speaker emphasizes the importance of making distributed tracing easier to use and integrating it with other tools to improve its relevance and adoption.
+        - The speaker discusses the challenges of understanding and utilizing profiling data and suggests that making these systems easier to use is crucial.
+        - The speaker highlights the difficulty of implementing tracing in the UI due to the asynchronous nature of web applications, particularly with popular libraries like React.[0m
+[33m67.297s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m67.298s[0m [36m===========================[0m
+[33m69.221s[0m [1mresponse.Data.Output[0m=[36m- Incident response involves problem solvers, communicators, and an incident commander who has an overview of the situation. This forms a response trio.
+        - Signals and coordination are important during incidents. Teams need to build shared mental models and a common language through practice.
+        - Improvisation and adaptive capacity are essential during incidents as things often become chaotic and complicated.
+        - Teams need to practice together regularly to build muscle memory and the ability to improvise when needed.
+        - Teams should clarify roles, routines, expertise, and production pressure during incidents to coordinate effectively.
+        - Listening is an important part of how humans work together. Teams should support each other and guide less experienced members.
+        - Diverse perspectives can help make better decisions during incidents. Teams should avoid tunnel vision.
+        - Asking questions and communicating is key to breaking out of tunnel vision and coordinating during incidents.
+        - Teams can practice remote collaboration and workflows together to prepare for incidents.
+        - Building empathy and closeness between team members can help with coordination and response.[0m
+[33m69.222s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m69.224s[0m [36m===========================[0m
+[33m69.257s[0m [1mresponse.Data.Output[0m=[36mThis video discusses the importance of human observability in incident response. It explains how musicians use improvisation to build muscle memory and how this can be applied to incident response. It also explains how to create a common language between responders and how to break out of tunnel vision. It also suggests creating a matrix to quickly find expertise and using RSS feeds to stay up to date. Finally, it emphasizes the importance of empathy and collaboration in incident response, and how it can help responders be better prepared for future incidents. Dr. Richard Cook's quote, "How complex systems fail," is a reminder of the importance of human observability in incident response.[0m
+[33m69.258s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m69.259s[0m [36m===========================[0m
+
+[14:44:36 ytsum/ytsum.go:101 app/internal/ytsum.summarizeVideoMixMatch.func1]
+[33m0.001s[0m [1mresponse.Data.Output[0m=[36m- The speaker, Matt, is a musician who brings his musical background into his work in technology.
+       - Matt emphasizes the importance of coordination and communication in incident response, comparing it to the choreography of a musical performance.
+       - He introduces the concept of adaptive choreography and highlights the need for attention and awareness in incident response.
+       - Matt likens incident response to a trio, involving problem solvers, communication leads, and a conductor-like role.
+       - He discusses the role of improvisation in incidents and draws parallels to jazz musicians who build an idiomatic language through practice.
+       - Matt references a study on Arctic rescue training, which emphasizes the need for collaborative training to prepare for improvisation.
+       - He explains that improvisation and adaptive capacity are equivalent, and building a common grounding and shared mental models is crucial.
+       - The speaker discusses the importance of signals in communication and highlights the challenges of perceiving signals in remote or distributed settings.
+       - Matt emphasizes the need for clear roles, common communication channels, and routines in incident response to lower coordination costs.
+       - He encourages the inclusion of diverse perspectives, informed decision-making, and the practice of asking questions to break tunnel vision during incidents.[0m
+[33m0.002s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m0.005s[0m [36m===========================[0m
+[33m0.869s[0m [1mresponse.Data.Output[0m=[36m- Shallow data can obfuscate important details about incidents and distract from understanding system functionality.
+       - Duration of incidents does not necessarily correlate with severity or impact.
+       - Severity levels are subjective and can be manipulated for various purposes.
+       - Different organizations use severity levels differently, and their value lies in how they are used and changed.
+       - Incident analysis can reveal patterns and insights that are not evident in incident reports alone.
+       - Sharing incident information transparently can inspire others to do the same and improve system reliability.
+       - Understanding qualitative metrics and feelings towards incidents can help identify areas of improvement.
+       - Deep analysis of incidents can uncover hidden patterns and expertise in managing systems.
+       - Safety boundaries in complex systems are constantly shifting and difficult to predict.
+       - Splunking incidents with greater care can lead to a better understanding of system behavior and potential risks.[0m
+[33m0.870s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m0.871s[0m [36m===========================[0m
+[33m1.980s[0m [1mresponse.Data.Output[0m=[36m- Traditional metrics like mean time to recover, severity levels, and root cause analysis often oversimplify incidents and fail to provide useful insights. They can be misleading and distract from deeper analysis.
+       - Looking at incident stories and narratives can provide richer details and uncover systemic factors that metrics cannot capture. Stories contain "multitudes" that metrics lack.
+       - Near misses and averted incidents can provide even more interesting details and insights into gaps in knowledge, assumptions, and mental models.
+       - Safety boundaries are important concepts to understand how systems operate, but they are often dynamic and not well known in the moment. Deeper incident analysis can help reveal where the operating point is.
+       - People adapt and adjust to where the operating point is through expertise, workarounds, and tweaking of controls.
+       - Pockets of expertise exist within organizations, and knowledge transfer between individuals is important for resilience.
+       - Mental models and assumptions do not always align within organizations, which can lead to issues.
+       - Deeper incident analysis and storytelling is hard work but builds a community of practice around safety and reliability.
+       - The community provides support, education, and care for incident responders.
+       - Curating and sharing incident stories can illuminate, educate, and care for the community.[0m
+[33m1.981s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m1.982s[0m [36m===========================[0m
+[33m2.040s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the value of deeper incident analysis and how it can help organizations better understand their systems. It discussed the limitations of shallow data, such as duration, mean time to recover, severity, and root cause. It also discussed the concept of safety boundaries, which can help organizations understand where they are in relation to their systems. It also discussed the importance of transferring knowledge between individuals and teams, and how this can help create a safer environment. Finally, it highlighted the importance of understanding cognitive processes and how they can play a part in incident analysis. Overall, this video highlighted the importance of deeper incident analysis and how it can help organizations better understand their systems.[0m
+[33m2.041s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m2.042s[0m [36m===========================[0m
+
+[14:44:41 ytsum/ytsum.go:101 app/internal/ytsum.summarizeVideoMixMatch.func1]
+[33m0.001s[0m [1mresponse.Data.Output[0m=[36mAdam Shake spoke about applying SRE to manufacturing EVs. He discussed the challenges of human safety, physical product outcomes, and legacy tech stacks. He shared a story of how he was able to automate a process that used to take nine hours to do 45 IPCs, and now takes under an hour. He discussed the importance of observability, automation, and open source software. He also highlighted the importance of building relationships with other teams, such as the control teams, to ensure success. Finally, he discussed his vision of a software-defined factory, where devices provision themselves and the team is primarily supervisory. It was an inspiring story of how SRE can make a huge impact in the manufacturing world.[0m
+[33m0.003s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m0.005s[0m [1mresponse.Data.Output[0m=[36m- The speaker talks about applying SRE principles and practices to manufacturing electric vehicles at Rivian. This includes automation, CI/CD, infrastructure as code, and observability.
+       - Human safety is a key concern since failures in the manufacturing systems could impact human workers.
+       - The speaker initially faced challenges in implementing SRE practices due to legacy systems and aversion to change in the manufacturing environment.
+       - Observability was a critical first step to gain visibility into the manufacturing systems and processes.
+       - Automation and tools like Ansible helped speed up and standardize tasks like provisioning touchscreen devices, reducing time from 9 hours to under an hour.
+       - Containers, Prometheus, and custom tooling further improved the processes.
+       - The speaker advocates an open source first approach to leverage configurability and differentiation.
+       - The ultimate goal is fully automated deployment where devices can provision themselves once powered on.
+       - The speaker wants to expand SRE practices to other manufacturing facilities by focusing on automation and code instead of growing the SRE team size linearly.
+       - The speaker views the journey of implementing SRE as an adventure, with progress happening in non-linear ways.[0m
+[33m0.006s[0m [1mresponse.Data.Output[0m=[36m- The speaker discusses the application of Site Reliability Engineering (SRE) in the manufacturing of electric vehicles (EVs).
+       - The challenges in manufacturing EVs include human safety, physical product outcomes, legacy tech stack ideals, and disconnect between business and IT.
+       - SRE can play a significant role in improving processes, building relationships, using data for decision-making, and enhancing the production of vehicles.
+       - The scale of devices in modern manufacturing facilities is massive, including IoT devices, robots, testing equipment, and legacy devices with outdated communication methods.
+       - The speaker shares a manual process of setting up production devices, which later led to issues and the need for fleet-wide changes.
+       - Automation and repeatability were introduced to improve the process, resulting in significant time savings and reduced issues.
+       - The speaker emphasizes the importance of observability and the use of Prometheus and Grafana for monitoring and control.
+       - The speaker highlights the use of open-source software and the adoption of automation as a force multiplier.
+       - Building relationships and collaboration between control teams and IT teams is crucial for successful implementation.
+       - The speaker envisions a future of a software-defined factory with increased automation, fewer manual tasks, and a focus on supervisory roles, leading to efficient production of vehicles.[0m
+[33m0.006s[0m [36m===========================[0m
+[33m0.007s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m0.007s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m0.008s[0m [36m===========================[0m
+[33m0.008s[0m [36m===========================[0m
+[33m0.478s[0m [1mresponse.Data.Output[0m=[36mThis video discussed strategies for defending against botnet DDoS attacks. Microsoft has experienced a lot of these attacks and has learned a lot of lessons about service hardening and defense strategies. They discussed the need for automated responses and simulations to test algorithms. They also discussed the need for a rule engine to block requests that match a certain pattern. Finally, they discussed the concept of client reputation, which is the ability to examine a request and make a judgment on how valuable it is to a service and the risk it may pose. This is a highly custom process, as it requires understanding what requests look like.[0m
+[33m0.479s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m0.481s[0m [36m===========================[0m
+[33m0.557s[0m [1mresponse.Data.Output[0m=[36m- DDoS attacks are becoming more frequent and severe, with the overall volume of attacks increasing by 95% over the last 5 years.
+       - Simply scaling out at the ingress point is not an effective strategy to handle DDoS attacks. Services need to invest in service hardening and graceful degradation.
+       - DDoS attacks can manifest in different ways and require service-specific context to identify. Metrics and logs need to be hardened to reliably detect attacks.
+       - Graceful degradation means each part of the stack has awareness to reduce resource consumption during attacks. This allows services to continue functioning in a degraded state.
+       - Default rules with general blocking criteria can be deployed locally to protect services when automatic detection fails. This prevents services from going down completely.
+       - Client reputation can be used to de-prioritize requests from untrusted sources, allowing important requests to continue processing.
+       - Requests should be blocked as early as possible to minimize impact during attacks.
+       - Automating detection and response is critical to effectively handle DDoS attacks.
+       - Hardened metrics and logs are essential to reliably detect attacks.
+       - Leadership needs to understand that services may be offline for the duration of an attack, which is outside of their control.[0m
+[33m0.558s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m0.559s[0m [36m===========================[0m
+[33m2.130s[0m [1mresponse.Data.Output[0m=[36m- The speaker has been working on creating a DDoS defense strategy based on their experiences with bigger and more frequent attacks.
+       - The effectiveness of CDNs and ISPs in absorbing massive attacks has led to a drop in perceived effectiveness, as a small percentage of traffic that slips through can still take a system offline.
+       - Scaling out at the Ingress point is not a viable strategy for surviving large DDoS attacks, and investing in service hardening and graceful degradation is necessary.
+       - Dos attacks can have different motivations and characteristics, including being used as a distraction or for social engineering.
+       - Filtering metrics to exclude suspicious traffic can hide increases in volume but not latency, leading to a blind spot in detecting bot traffic.
+       - Simulations and testing algorithms before going live can help in understanding how systems will work together during DDoS attacks.
+       - Blocking traffic at the top layer can protect against overwhelming traffic, but it can also result in serving error pages and degraded user experience.
+       - Developing a rule engine and deploying blocking rules can help in identifying and mitigating attacks, but it can be a manual and time-consuming process.
+       - Automating the detection and response to attacks is crucial to protect systems, and default rules can be deployed with the service itself to provide initial protection.
+       - Implementing graceful degradation allows for smarter filtering and decision-making, such as throttling, deprioritizing requests, or issuing capture challenges to slow down attackers.[0m
+[33m2.131s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m2.132s[0m [36m===========================[0m
+[33m2.745s[0m [1mresponse.Data.Output[0m=[36m- The speaker, Austin Parker, is the head of developer relations at Lightstep, a company that focuses on observability and open telemetry.
+       - Parker discusses the concept of commodification in socio-technical movements, specifically in relation to agile, DevOps, and SRE (Site Reliability Engineering).
+       - Agile, DevOps, and SRE are seen as reactions to the commodification of prior socio-technical movements.
+       - Agile, which prioritizes individuals and interactions over processes and tools, has been commodified and turned into a product that can be bought.
+       - DevOps has also been commodified and can be purchased as a product from major cloud providers.
+       - SRE is seen as a reaction to the commodification of DevOps, aiming to bring back the cultural and human elements while incorporating technical aspects.
+       - The principles of mutual aid and mutual confidence, derived from anarchist philosophy, are highlighted as important in socio-technical movements.
+       - SRE can help build mutual confidence and individual initiative by creating support networks and empowering individuals within the organization.
+       - Continuous learning and knowledge sharing are emphasized as important for SRE practitioners.
+       - The goal of SRE is to distribute power and authority within the organization and communities, leading to better outcomes.[0m
+[33m2.748s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m2.749s[0m [36m===========================[0m
+[33m4.115s[0m [1mresponse.Data.Output[0m=[36mAustin Parker, head of developer relations at Lightstep, discussed the history of socio-technical movements such as Agile, DevOps, and SRE. He argued that these movements are a reaction to the commodification of prior socio-technical movements. He then discussed the philosophy of anarchism, and how it relates to SRE. He argued that SREs should focus on building communality and distributing power and authority in the organization. He also encouraged people to read books on the subject, and to learn more about liberal arts. He concluded by thanking his makeup artist for the color coordination of his slides.[0m
+[33m4.116s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m4.117s[0m [36m===========================[0m
+[33m4.150s[0m [1mresponse.Data.Output[0m=[36m- Socio-technical movements like Agile, DevOps and SRE are reactions to the commodification of previous movements. Each new movement seeks to reclaim the cultural values that were lost.
+       - Agile emphasized cultural values and local decision making, but over time it was commodified into processes and tools.
+       - DevOps also emphasized practitioner empowerment and professionalizing ops work, but it too was turned into products that could be bought and sold.
+       - SRE synthesizes aspects of Agile and DevOps, seeking a cultural reformation that gives those doing the work more say in how it's done.
+       - The movements are ultimately about power in the workplace and society. Success is co-opted through structural incentives that blunt their effectiveness.
+       - The idea of mutual aid - where individuals work together for collective benefit - underlies the socio-technical movements.
+       - SREs should build communality, turning workers into citizens with power and initiative. They should distribute power and authority in the organization.
+       - SREs should cultivate knowledge and structure to support individual initiative while providing guardrails.
+       - SREs should be organizers that empower people, not mythic heroes.
+       - Readings in social philosophy can provide useful insights even if you don't agree with them politically. They can help you grow as a person.[0m
+[33m4.151s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m4.152s[0m [36m===========================[0m
+[33m4.757s[0m [1mresponse.Data.Output[0m=[36mDBS Bank, headquartered in Singapore, has implemented SRE in a regulated environment. They have created their own DBS Vision Tree to cultivate a blameless culture and strive for transparency, knowledge sharing, recognition, and continuous improvement. They have also debunked the myth that every disruption is seen as a singular independent occurrence by doing multivariant analysis and creating their own tools to reduce incidents. They have also moved to the cloud to promote sustainability and have achieved many successes in their SRE journey. An interesting point is that they have built their own in-house tool, Raccoon, to surface unknowns and increase attack vectors to 60 plus.[0m
+[33m4.758s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m4.759s[0m [36m===========================[0m
+[33m6.330s[0m [1mresponse.Data.Output[0m=[36m- Regulations in the banking industry are intended to promote resiliency, reliability, accountability and customer interest which align with SRE principles.
+       - DBS Bank takes a no single root cause analysis approach and cultivates a blameless culture to uncover all contributing factors during incidents.
+       - Chaos testing allows them to uncover unknown risks that have crept into their distributed microservices architecture.
+       - They built their own in-house chaos engineering tool called raccoon to perform chaos testing.
+       - Multivariate analysis of incidents uncovered broader issues across different areas that they addressed with in-house tools.
+       - They created tools to improve architecture, capacity planning, testing, observability, incident response and learning from incidents.
+       - These tools helped them reduce the number of incidents over time.
+       - DBS Bank is moving to the cloud to build a more robust infrastructure.
+       - DBS Bank has achieved several accolades that affirm their SRE journey is on the right track.
+       - They encourage sharing knowledge through their tech blog and LinkedIn engineering network.[0m
+[33m6.331s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m6.332s[0m [36m===========================[0m
+[33m6.333s[0m [1mresponse.Data.Output[0m=[36m- DBS Bank is the largest bank in Southeast Asia and has been recognized as the world's best bank.
+       - Regulators oversee the banking industry and enforce rules to promote resiliency, reliability, availability, and accountability.
+       - Implementing SRE (Site Reliability Engineering) in a regulated environment requires overcoming challenges.
+       - No single root cause analysis is sufficient to address disruptions; multiple contributing factors must be considered.
+       - Cultivating a blameless culture and fostering psychological safety are important in implementing SRE.
+       - Chaos testing is essential to uncover unknown risks and improve system resilience.
+       - DBS Bank has developed its own tools, such as the raccoon tool for chaos testing, to enhance SRE practices.
+       - Multivariate analysis and data-driven insights help uncover the bigger picture and identify areas for improvement.
+       - DBS Bank has created tools and frameworks to address specific areas of improvement in SRE, such as architecture capacity, testing, observability, and incident response.
+       - DBS Bank's SRE journey is ongoing, and continuous learning, collaboration, and accountability are key to its success.[0m
+[33m6.334s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m6.334s[0m [36m===========================[0m
+[33m6.813s[0m [1mresponse.Data.Output[0m=[36m- Shopify's infrastructure exists to support their e-commerce platform for merchants and buyers. They run hundreds of clusters on Google Cloud.
+       - Shopify realized they were not getting good value for the money they were spending on cloud infrastructure. They set an ambitious target to reduce their monthly spend by a meaningful amount.
+       - Engineers lacked context about the real costs of resources, so they could not accurately estimate cost savings. Providing tools to visualize billing data helped give them this context.
+       - Bin packing pods onto nodes efficiently and right-sizing resource requests helped reduce unallocated resources and save costs.
+       - Copy-pasting terraform configurations led to using inappropriate machine types and storage. Policy checks helped inform engineers.
+       - Simply lowering costs is not the goal; the focus should be maximizing value and connecting spend to the value delivered to customers.
+       - Doing accurate traffic forecasts and capacity planning can help optimize infrastructure usage.
+       - Making resources self-describing by adding labels helps attribute costs and understand infrastructure.
+       - Measuring systems in unit costs (e.g. cost per request) helps connect costs to value delivered.
+       - Engaging with stakeholders to understand what value means to them helps optimize infrastructure spend.[0m
+[33m6.814s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m6.815s[0m [36m===========================[0m
+[33m8.367s[0m [1mresponse.Data.Output[0m=[36mThis video discussed financial resiliency engineering and how Shopify was able to tame their cloud costs. Shopify used a spreadsheet to prioritize work and give engineers the context they needed to make better judgments. They improved their bin packing problem, cargo cutting, and policy checking to reduce their bill. Shopify also connected cost with value, understanding the trade-offs and the value they were getting for their spend. They also engaged with stakeholders and customers to figure out what value they were delivering. This was a great example of how to manage cloud costs and ensure financial resiliency.[0m
+[33m8.368s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m8.368s[0m [36m===========================[0m
+[33m8.369s[0m [1mresponse.Data.Output[0m=[36m- Cost efficiency and infrastructure efficiency are crucial for meeting business objectives.
+       - Shopify's tech stack is primarily based on Ruby and runs on Kubernetes on Google Cloud.
+       - Managing cloud costs involves a Sawtooth pattern of slow increases and sharp decreases.
+       - Prioritizing cost-saving efforts that deliver significant impact is important.
+       - Lack of context regarding the real cost of infrastructure components can hinder cost estimation.
+       - Negotiated discounts and savings plans with cloud providers can impact cost calculations.
+       - Tools that provide context on the real cost of infrastructure components can help prioritize cost-saving efforts.
+       - Incremental wins in large systems and turning off underutilized resources can lead to significant savings.
+       - Efficiently packing Kubernetes pods onto nodes can improve cost efficiency.
+       - Implementing guardrails and policies can prevent unnecessary expenses in infrastructure management.[0m
+[33m8.370s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m8.370s[0m [36m===========================[0m
+[33m9.096s[0m [1mresponse.Data.Output[0m=[36mPat Someru, a production engineer at Meadow, presented a talk on how to store and query profiler data in a better way. Profiler data is observational data on software and systems, and is often generated by tools like perf lib BPI for your kit. By storing profiler data in a directed acyclic graph (DAG), the data footprint can be reduced by roughly five orders of magnitude. The DAG consists of stack nodes, which are counts of times that a stack node data has been seen at a location in a stack for a particular binary. Stack node data has relatively low cardinality, which enables finding regressions across binaries via static SQL queries. Pat demonstrated this by updating demo.c to have do logging make simulate work do 10 times as much work as it would previously do. He then used the CLI of Stow, an open source implementation of the techniques discussed, to run a profiler and ingest the data output into a database. The results showed that do logging was taking up way more runtime than expected. This talk highlighted the benefits of treating the call graph as a graph, and how it can be used to make call graphs easily storable and queryable.[0m
+[33m9.099s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m9.100s[0m [36m===========================[0m
+[33m10.350s[0m [1mresponse.Data.Output[0m=[36m- The speaker discusses techniques for storing and querying profiler data in an efficient way using a directed acyclic graph (DAG) model. This can reduce the data footprint by 5 orders of magnitude.
+        - Profiler data consists of stack snapshots showing what code is running on a system. This data is used to understand system performance.
+        - Profiler data can generate large amounts of data quickly, making storage and querying difficult. The speaker had a case where 2GB of profiler data was generated in 10 seconds.
+        - The speaker proposes storing profiler data in a DAG to reduce its footprint. They implement this in a tool called Stow.
+        - The DAG model is based on stack nodes, stack node data, and executable IDs to represent the call graph structure.
+        - Storing stack node data as hashed integers helps reduce data size and enables finding code regressions across binaries.
+        - The data model uses indices to enable efficient querying based on stack node data and call graph traversal patterns.
+        - The data model can find regressions across binaries using static SQL queries that leverage code reuse.
+        - The speaker demonstrates Stow's ability to ingest profiler data, store it in a database, and query it using a UI.
+        - Treating the call graph as a graph provides many benefits for storing and querying profiler data efficiently.[0m
+[33m10.351s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m10.354s[0m [36m===========================[0m
+[33m10.367s[0m [1mresponse.Data.Output[0m=[36m- Profiler data is observational data on software and systems, consisting of snapshots of what is being run on a system.
+        - Flame graphs are a way to view performance data, showing the relative presence of frames in a collection of stack snapshots.
+        - Storing and querying profiler data can become difficult, especially at large scales where data can reach the size of a third of a petabyte per day.
+        - Storing profiler data in a directed acyclic graph (DAG) can significantly reduce its footprint by roughly five orders of magnitude.
+        - The tool Stow, which implements storing profiler data in a DAG, can optimize data footprint and improve queryability.
+        - Stack nodes, which are counts of times that a stack node data has been seen at a location in a stack for a particular binary, are the vertices of the graph in the DAG model.
+        - Storing stack node data as a combination of symbol file path, line number, and hash reduces the size of the data stored substantially.
+        - The DAG model enables finding regressions across binaries via static SQL queries, leveraging code reuse.
+        - Stow provides a CLI and UI for running profilers, ingesting data, and querying for regressions.
+        - Treating the call graph as a graph and leveraging the DAG model makes call graphs easily storable and queryable.[0m
+[33m10.369s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m10.371s[0m [36m===========================[0m
+[33m12.349s[0m [1mresponse.Data.Output[0m=[36m- Chaos engineering and chaos-driven development can help build more resilient systems by proactively testing failure scenarios and identifying weaknesses early.
+        - Even planning chaos experiments can teach valuable lessons and improve system understanding without actually running the experiments.
+        - Chaos experiments allow organizations to codify their resilience and reliability expectations as "tests."
+        - Applying test-driven development principles to resilience can help shift resilience left in the development cycle.
+        - Early chaos experiments can improve design choices and identify faults in the architecture before production.
+        - Early experiments provide confidence in design choices and reveal limitations of components, platforms, and defaults.
+        - The earlier issues are discovered, the less "dark debt" accumulates in the system.
+        - Observability and understanding of system limits from early experiments allow teams to make better design decisions.
+        - Automating chaos experiments allows teams to continually assert resilience as the system changes.
+        - Resilience stress tests should be part of certifying system designs, especially earlier in the development cycle.[0m
+[33m12.350s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m12.351s[0m [36m===========================[0m
+[33m12.407s[0m [1mresponse.Data.Output[0m=[36m- Chaos engineering allows for proactive learning and shortens the feedback cycle in distributed systems.
+        - Planning and thoughtful experimentation in chaos engineering can teach valuable lessons even before running the experiments.
+        - Chaos experiments provide a way to measure the response of a system to failures and can be treated as unit tests for reliability and resilience.
+        - Test-driven development (TDD) can be effective in improving program understanding, but the effectiveness relies on the accuracy and usefulness of the tests.
+        - Chaos-driven development, which combines chaos engineering with TDD, can lead to even shorter time to resilience and a better understanding of the system.
+        - Chaos experiments help identify missing pieces in the architecture and highlight areas that need improvement, such as monitoring, logging, and failover logic.
+        - Chaos experiments allow for unit testing of failover logic and other components in a distributed system using real failures instead of just mock events.
+        - Chaos experiments provide confidence in design choices and help identify faults in design early on, preventing potential issues in production.
+        - Chaos experiments can uncover limitations in software and platform configurations, allowing for adjustments and better understanding of system behavior.
+        - Resilient stress tests and chaos experiments should be part of the development process to certify designs, identify relevant scenarios, and ensure continued success.[0m
+[33m12.409s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m12.409s[0m [36m===========================[0m
+[33m12.411s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the concept of Chaos-Driven Development, which is a form of Test-Driven Development (TDD) for distributed systems. It is a proactive approach to testing that allows developers to explore the effects of potential failures on their own time, rather than waiting for incidents to occur. The speaker argued that chaos experiments can be treated as unit tests, and that by shifting expectations for resilience and reliability to the left, resilience can be treated as a feature of the system. The speaker also discussed the advantages of using chaos experiments to test distributed systems, such as gaining confidence in design choices, understanding software and platform limitations, and using the data to design workflows and change management procedures.[0m
+[33m12.411s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m12.412s[0m [36m===========================[0m
+[33m12.987s[0m [1mresponse.Data.Output[0m=[36mThis video discussed a system built to manage concurrency control for mixed analytical workloads. It drew inspiration from two sources: a talk by John Moore at Strange Loop 2017 and a blog post by Netflix. The system works by rejecting requests when the server is at capacity, and then retrying the request on another server. It also uses an Adaptive algorithm called AIMD (Additive Increase Multiplicative Decrease) to adjust the limit up and down based on the current set of conditions. Additionally, the system uses partitions to assign a percentage of the Global limit to sets of incoming use cases. When the system was taken live, it was observed that latency went up and down as expected, and that there was better utilization across the cluster due to the routing mechanism.[0m
+[33m12.988s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m12.989s[0m [36m===========================[0m
+[33m13.030s[0m [1mresponse.Data.Output[0m=[36m- The speaker works for a company called Clavio that specializes in marketing automation for e-commerce companies.
+        - The speaker encountered issues with timeouts and congestion in their service, leading them to investigate the cause.
+        - The speaker drew inspiration from a talk on capacity management and a blog post by Netflix on managing concurrency.
+        - Load shedding and early rejection can be used to handle spikes in incoming requests and improve the overall performance of the system.
+        - By implementing a routing mechanism, rejected requests can be quickly retried and routed to a server with available capacity.
+        - An adaptive algorithm called AIMD (Additive Increase Multiplicative Decrease) can be used to dynamically adjust the concurrency limit based on the current conditions and health of the service.
+        - Latency measurements can be used as feedback to adjust the concurrency limit, with higher latency leading to a decrease in the limit and vice versa.
+        - Partitioning can be used to assign a percentage of the global limit to different use cases or callers, providing guarantees and isolation for each use case.
+        - The implementation of adaptive concurrency control resulted in reduced latency, improved utilization across the cluster, and a decrease in timeouts and congestion.
+        - The speaker expressed satisfaction in seeing the direct cause and effect relationship between latency and concurrency limit adjustments in production.[0m
+[33m13.030s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m13.031s[0m [36m===========================[0m
+[33m14.400s[0m [1mresponse.Data.Output[0m=[36m- The speaker works on the data and analytics layer for a marketing automation company that ingests customer data and makes it queryable for analytics.
+        - They built a system that serves a wide range of analytical workloads from the same raw data and compute layer, calculating data on the fly.
+        - Initially the system worked well but occasionally they would see spikes in response times and timeouts due to congestion.
+        - They realized they needed to implement concurrency control and limits to avoid overloading the system.
+        - They drew inspiration from talks and blog posts on capacity management and Netflix's approach to adaptive concurrency control.
+        - They implemented a mechanism to accept or reject requests based on the current load and latency, using an additive-increase multiplicative-decrease algorithm.
+        - They observed that early rejection of requests and retries across servers improved overall cluster utilization.
+        - They partitioned the global limit among different use cases to guarantee a certain throughput for each.
+        - After implementing the adaptive concurrency control, they observed latency spikes but avoided widespread timeouts.
+        - They saw a wide range of latencies across servers, indicating the routing of requests to less congested servers was working.[0m
+[33m14.401s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m14.402s[0m [36m===========================[0m
+[33m15.241s[0m [1mresponse.Data.Output[0m=[36m- Being on-call is difficult and stressful, regardless of the severity or impact. It disrupts sleep and impacts people's wellbeing.
+        - Incident response in software is similar to emergency response in ambulances - it starts with one or two people responding and then scales up from there.
+        - Focus on building a team that can coordinate and respond to incidents, not on defining what constitutes an incident. Use the process when you need more coordination and support.
+        - The core roles in incident response are an organizer, connector and expert - someone to coordinate, liaise with others and provide hands-on expertise. These roles can be filled by different people for different incidents.
+        - Don't get too hung up on implementing a full ICS system. Focus on building common ground and shared practices within your team first.
+        - Despite planning and preparation, you will still be surprised during incidents. Having some shared practices and coordination helps you improvise and work together effectively.
+        - Start practicing and responding to incidents within your team. This allows you to experiment and optimize before scaling up to the whole organization.
+        - Runbooks and documentation cannot fully prepare you for the pace and unpredictability of incidents. Practice and experience working together are more important.
+        - Procedures do not necessarily create safety - sometimes breaking rules is needed. Having guidelines and practicing together is more important.
+        - Tabletop exercises, game days and simulations are important ways to practice incident response and build shared understanding within a team.[0m
+[33m15.242s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m15.243s[0m [36m===========================[0m
+[33m16.360s[0m [1mresponse.Data.Output[0m=[36m- The speaker draws parallels between incident response in software and emergency response in medicine, emphasizing the importance of learning from the latter.
+        - Being on call, regardless of the field, is challenging and has a human cost, as the body reacts to emergencies regardless of their nature.
+        - Incident response in software is more closely aligned with the ambulance model than other industries like aviation or nuclear power.
+        - The speaker encourages immediate action and implementation of incident response practices, rather than delaying or procrastinating.
+        - The concept of planting a seed is introduced, suggesting that incident response practices can be cultivated and adjusted over time.
+        - The speaker highlights what they won't be discussing, including how often to notify executives, severity classifications, order of response, specific software recommendations, and defining incidents.
+        - The importance of having an organizer, connector, and expert in incident response teams is emphasized, with the roles being flexible and adaptable.
+        - The speaker challenges the idea that writing runbooks alone can ensure safety, emphasizing the need for adaptation and improvisation during emergencies.
+        - Adaptability is encouraged, with the understanding that procedures and rules are not always the sole source of safety.
+        - The importance of practicing incident response as a team is emphasized, with various methods suggested, such as game days and simulations.[0m
+[33m16.361s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m16.362s[0m [36m===========================[0m
+[33m16.402s[0m [1mresponse.Data.Output[0m=[36mIn this video, Courtney talks about how incident response in software is similar to responding to emergencies on an ambulance. She explains that incident response is a team sport and that it is important to have an organizer, connector, and someone with expertise in the system. She also explains that writing runbooks is not enough to ensure safety and that it is important to practice responding to incidents. Courtney emphasizes the importance of adaptability and improvisation, and suggests that breaking the rules can sometimes create safety. She also suggests that practicing responding to incidents is important to ensure that everyone knows what to do in an emergency.[0m
+[33m16.403s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m16.404s[0m [36m===========================[0m
+[33m16.989s[0m [1mresponse.Data.Output[0m=[36m- eBay runs a massive metrics and observability platform at a scale of 1.25 million Prometheus endpoints and 41 million time series per second.
+        - They started with a centralized Prometheus-based approach but faced challenges in scaling and high cardinality.
+        - They then moved to a distributed "Planet scale" architecture inspired by Google's Monarch paper, keeping data closer to the source.
+        - They use a tiered storage system with Leafs, Zones and Root to store raw and aggregated time series data.
+        - They use an indexer and field fingerprints to minimize query fanout and discover where data resides.
+        - They push down queries and use projection to distribute query execution and limit data movement.
+        - Independent metric stores make the system more resilient to outages and easier to operate.
+        - GitHub specs management and rollout automation helped scale the distributed architecture.
+        - Custom APIs provided cost savings and enabled new features while maintaining user contracts.
+        - The distributed "Planet scale" architecture will enable them to scale ingestion to a billion events per second.[0m
+[33m16.990s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m16.991s[0m [36m===========================[0m
+[33m18.389s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the journey of eBay's observability platform from a centralized legacy platform to a planet-scale metrics installation. The team used Prometheus and Kubernetes to build a system that was simpler and more efficient. They implemented fan-out writes, tenant-based query routing, and stream-based aggregation to reduce resource utilization and increase scalability. They also used trigram fingerprints, full string fingerprints, and custom engrams to improve query accuracy. Finally, they discussed the benefits of their system, such as better scaling capabilities, continuous observation and evolution, and native histogram support.[0m
+[33m18.390s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m18.391s[0m [36m===========================[0m
+[33m18.454s[0m [1mresponse.Data.Output[0m=[36m- The observability platform at eBay handles a massive amount of log files and time series data.
+        - eBay migrated from a centralized legacy platform to Prometheus for better scalability and efficiency.
+        - Scaling Prometheus can be challenging, but eBay implemented fan-out writes and avoided complex replication.
+        - eBay integrated Prometheus tightly with Kubernetes, using annotations and CRDs for mapping time series.
+        - The adoption of stream-based aggregation resulted in significant CPU and memory savings.
+        - eBay aimed to replicate Google's planet-scale time series database, Monarch, using open-source technology.
+        - Spreading data closer to the source improved resource utilization but reduced data availability.
+        - The use of indexers and query projection helped optimize query execution and minimize data movement.
+        - Horizontal scaling through the use of leaves eliminated the need for managing different tsdb clusters.
+        - Continuous observation, evolution, and considering new features are crucial for the success of the observability platform.[0m
+[33m18.454s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m18.455s[0m [36m===========================[0m
+[33m19.010s[0m [1mresponse.Data.Output[0m=[36m- The traditional approach to security, known as the CIA Triad (Confidentiality, Integrity, Availability), is outdated and ineffective in today's landscape.
+        - The concept of the D.I.E. Triad (Distributed, Immutable, Ephemerin) is a new paradigm for securing infrastructure.
+        - Distributed infrastructure allows for redundancy and fault tolerance, making the system highly available.
+        - Immutable infrastructure means not making any changes once deployed, making it difficult for attackers to exploit vulnerabilities.
+        - Ephemerin infrastructure is short-lived and serves its purpose before being destroyed, making it difficult for attackers to plan attacks.
+        - Designing infrastructure based on the D.I.E. Triad inherently incorporates security measures.
+        - Implementing chaos engineering helps identify weaknesses and improve the system's resilience.
+        - Monitoring, logging, and metrics are essential for understanding and securing complex systems.
+        - Securing infrastructure that is ready to "die" is easier and lowers the risk of impact.
+        - Shifting towards a distributed, immutable, and ephemeral infrastructure reduces the need to worry about traditional security principles like confidentiality, integrity, and availability.[0m
+[33m19.012s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m19.013s[0m [36m===========================[0m
+[33m20.403s[0m [1mresponse.Data.Output[0m=[36mThis talk discussed how the traditional security approach of the CIA Triad (Confidentiality, Integrity, and Availability) is no longer effective in today's world. The speaker discussed a true story of a diamond heist in Belgium in 2003 to illustrate how the old approach is no longer useful. The speaker then discussed the new approach of the DIE Triad (Distributed, Immutable, and Ephemeral) and how it can be used to incorporate security into infrastructure. The speaker also discussed how chaos engineering can be used to experiment and understand the system, and how it can help identify any potential weaknesses. Finally, the speaker concluded that the more distributed, immutable, and ephemeral the infrastructure is, the lower the risk of it being impacted.[0m
+[33m20.406s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m20.407s[0m [36m===========================[0m
+[33m20.469s[0m [1mresponse.Data.Output[0m=[36m- The old CIA triad of security (confidentiality, integrity and availability) is outdated and insufficient in today's world. A new approach called the DIE triad (distributed, immutable and ephemeral) is proposed.
+        - Distributed infrastructure makes systems more resilient by avoiding single points of failure and reducing the impact of attacks.
+        - Immutable infrastructure means deploying systems that cannot be changed after deployment. This makes them more secure and easier to monitor.
+        - Ephemeral infrastructure means systems that have short lifespans. This makes it difficult for attackers to plan and execute attacks.
+        - Chaos engineering involves experimenting with failures to understand a system's weaknesses and improve its resilience.
+        - Observability is crucial for chaos engineering through monitoring, logging and metrics.
+        - Chaos engineering starts with a hypothesis and experiment to validate or invalidate that hypothesis.
+        - Not all systems can immediately transition to the DIE triad. Changes can be made incrementally.
+        - Tools like Terraform, Packer and Kubernetes can help automate aspects of distributed, immutable and ephemeral infrastructure.
+        - Security should be built into infrastructure design rather than added as an afterthought.[0m
+[33m20.470s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m20.471s[0m [36m===========================[0m
+[33m21.029s[0m [1mresponse.Data.Output[0m=[36m- The speaker discusses the importance of measuring reliability and understanding what it means for the customer.
+        - The speaker mentions the adoption failure of SLOs (Service Level Objectives) and the circular sales strategy trap.
+        - The speaker acknowledges that failures are inevitable in any system and highlights the challenge of managing thousands of applications.
+        - The speaker introduces the concept of error budgets and how they are calculated based on SLIs (Service Level Indicators) and objectives.
+        - The speaker emphasizes the need for better signaling and information gathering from incidents and changes, rather than relying solely on SLIs.
+        - The speaker discusses the discovery of the correlation between different events and the creation of a "money chart" to understand system behavior.
+        - The speaker emphasizes the importance of involving leadership, Dev, SREs, and product teams in the process of improving reliability.
+        - The speaker highlights the need for a process to continuously monitor and improve system behavior, starting with simple indicators and gradually expanding.
+        - The speaker discusses the importance of understanding the customer's perspective and aligning system behavior with their goals.
+        - The speaker provides formulas and strategies for measuring and predicting system behavior, while also emphasizing the need for explainability and communication.[0m
+[33m21.030s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m21.031s[0m [36m===========================[0m
+[33m22.430s[0m [1mresponse.Data.Output[0m=[36m- SREs have an identity beyond just fixing toil and low hanging fruit. They focus on risk management, release engineering, resiliency, and reliability measurement through SLOs and error budgets.
+        - Simply adopting SLOs and error budgets is not enough. There needs to be a strategy around experimenting, iterating, and scaling the approach.
+        - Not all minutes of traffic are equal in importance. Focusing only on the number of errors can miss important signals.
+        - Correlating SLOs and error budgets with existing system health indicators like incidents and changes can provide more useful insights.
+        - Slow burns and recoveries can provide important signals about system health beyond just incidents.
+        - Actioning the data from SLOs requires the right people, processes, and policy in place. It's a socio-technical problem.
+        - Starting with simple, default SLOs can help teams get started, but they should evolve over time as understanding of the system improves.
+        - Scaling SLO adoption requires starting simple, adding edge cases, and mapping to the customer experience.
+        - The time period studied for SLOs - 30 days, consumption time, and prediction window - can be confusing and need explanation.
+        - Explainability of SLO data and charts is important for adoption.[0m
+[33m22.431s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m22.432s[0m [36m===========================[0m
+[33m22.515s[0m [1mresponse.Data.Output[0m=[36mThis video discussed the importance of understanding customer experience when it comes to reliability and how to measure it. It discussed the concept of SLOs and error budgets, and how to use them to measure reliability. It also discussed the importance of understanding the system behavior and how to use data to predict future behavior. It also discussed the importance of having a process in place to ensure reliability and how to use formulas to measure it. An interesting takeaway from this video was the concept of "fast Burns" and "slow Burns" which are used to measure the error budget remaining. This video also highlighted the importance of having leadership and Dev teams involved in the process of ensuring reliability.[0m
+[33m22.517s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m22.517s[0m [36m===========================[0m
+[33m23.227s[0m [1mresponse.Data.Output[0m=[36m- There is a lot of confusion and debate around terms like SRE, DevOps, and platform engineering. They are often poorly defined and people have different understandings of what they mean.
+        - Many of these roles and approaches are essentially doing the same thing - keeping systems running - they just have different names and tools.
+        - People's identities become tied to these buzzwords and approaches, but they may not actually be that meaningful or well-defined.
+        - Platforms exist because there is a need to build, run and manage services at scale. They did not come first, the need came first.
+        - Organizations still need to operate systems and deal with operations issues, even with platforms and abstractions. Someone has to take responsibility for keeping things running.
+        - People become dependent on how others define these roles and approaches in order to define themselves.
+        - People are told they need to adopt many practices to be successful, like CI/CD, SLOs, microservices, etc. but there is no one right answer.
+        - People should not tie their identities to specific tasks, as those tasks will inevitably change over time.
+        - People can "escape hell" by not basing their identities on what others tell them and by taking their own actions.
+        - The important thing is keeping systems running, the specific roles and approaches are less important.[0m
+[33m23.228s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36mcecil[0m
+[33m23.229s[0m [36m===========================[0m
+[33m24.471s[0m [1mresponse.Data.Output[0m=[36mAlex Hidalgo, the Principal Reliability Advocate at Noble Nine, discussed the idea that "hell is other platforms" at SREcon23 Americas. He discussed how platforms exist because of necessity, and how people become dependent on the definitions of others when it comes to understanding themselves and their platforms. He also discussed how people can become traumatically bonded to their platforms, and how they can escape this "hell" if they are brave enough to take action and make their own meaningful decisions. He concluded by saying that it doesn't matter what title or buzzword you use to define yourself, but that it is important to be brave enough to step through the door and escape the "hell" of other platforms.[0m
+[33m24.472s[0m [36m^^^^^^^: [0m [1mt[0m=[36msummary[0m [36m ENGINE:[0m [1me[0m=[36mdaphne[0m
+[33m24.472s[0m [36m===========================[0m
+[33m24.535s[0m [1mresponse.Data.Output[0m=[36m- The concept of hell in Jean-Paul Sartre's play "No Exit" is used as a metaphor for platforms and the challenges they present.
+        - Hell is depicted as a comfortable sitting room, rather than a place of torture, which surprises the characters.
+        - The speaker, Alex Hidalgo, apologizes for the death of DevOps and asserts that SRE (Site Reliability Engineering) is also dead.
+        - The speaker discusses the evolution of terms and concepts in the field of operations, such as DevOps, SRE, and platform engineering.
+        - The dependence on others' definitions and opinions is highlighted as a source of frustration and confusion in the industry.
+        - The speaker emphasizes the need for individuals to take agency and make their own decisions, rather than relying solely on others' guidance.
+        - The play's theme of dependence on others is compared to the reliance on platforms and the challenges of operating complex systems.
+        - The speaker discusses the challenges and traumas experienced by operators and the difficulty of letting go of a sense of identity tied to a particular organization.
+        - The importance of understanding and adapting to complex systems is emphasized, as well as the constant evolution of system administration.
+        - The speaker concludes by encouraging individuals to be brave and take the necessary steps to escape the challenges and limitations of the current state of operations.[0m
+[33m24.536s[0m [36m^^^^^^^: [0m [1mt[0m=[36mtakeaway[0m [36m ENGINE:[0m [1me[0m=[36magnes[0m
+[33m24.537s[0m [36m===========================[0m
