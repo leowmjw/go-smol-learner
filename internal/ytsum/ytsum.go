@@ -70,11 +70,14 @@ func summarizeSingleVideoMixMatch(videoId string) {
 }
 
 // summarizeVideoMixMatch combines a few to see what is good ..
-func summarizeVideoMixMatch(videoId string) {
+func summarizeVideoMixMatch(videoId, title, desc string) {
 	var wg *sync.WaitGroup
 
 	videoURL := fmt.Sprintf("https://www.youtube.com/watch?v=%s", videoId)
 	fmt.Println("SUMMARIZE:", videoURL)
+
+	q.Q("***********************************")
+	q.Q(title, videoURL, desc)
 
 	kagiKey := os.Getenv("KAGI_KEY")
 	client := kagi.NewClient(kagiKey)
@@ -178,7 +181,7 @@ func AllGo(playListId string) {
 	}
 	// Get playlist items (videos).
 	playlistItemsResponse, err := service.PlaylistItems.List([]string{"snippet"}).
-		PlaylistId(playListId).MaxResults(50).Do()
+		PlaylistId(playListId).MaxResults(200).Do()
 	if err != nil {
 		panic(err)
 	}
@@ -186,9 +189,13 @@ func AllGo(playListId string) {
 	// Download each video and get its transcript.
 	for _, item := range playlistItemsResponse.Items {
 		videoId := item.Snippet.ResourceId.VideoId
+		title := item.Snippet.Title
+		desc := item.Snippet.Description
+		// DEBUG
+		//fmt.Println("TITLE: ", title, "DESC:", desc)
 		//summarizeSingleVideoMixMatch(videoId)
 		//below is concurrent version ..
-		summarizeVideoMixMatch(videoId)
+		summarizeVideoMixMatch(videoId, title, desc)
 	}
 
 }
